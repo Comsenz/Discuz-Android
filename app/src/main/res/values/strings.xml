@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">掌上论坛</string>
+    <string name="app_desc">掌上论坛</string>
+    <string name="copyright">©2001-2018 Comsenz Inc</string>
+    <string name="net_msg">无网络环境  点“是”会进行网络设置，点“否”取消</string>
+    <string name="ok">是</string>
+    <string name="no">否</string>
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="just">刚刚</string>
+    <string name="just_simple">刚刚</string>
+    <string name="minute_ago">1分钟前</string>
+    <string name="minute_ago_simple">1分钟前</string>
+    <string name="minutes_ago">分钟前</string>
+    <string name="minutes_ago_simple">分钟前</string>
+    <string name="time_today">今天</string>
+    <string name="forum_desc_today">今日： </string>
+    <string name="forum_desc_threads">主题：</string>
+    <string name="profile_status">Lv. %1$s</string>
+    <string name="single_choice">单选</string>
+    <string name="multi_choice">多选</string>
+    <string name="info_name">真实姓名</string>
+    <string name="info_phone">手机</string>
+    <string name="info_qq">QQ</string>
+
+    <string name="toast_network">网络不可用</string>
+    <string name="menu_title">掌上论坛</string>
+    <string name="menu_me">个人中心</string>
+    <string name="my">我的</string>
+    <string name="frist_page">发现</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="record_fail">录音失败</string>
+    <string name="time_too_short">时间太短，请重新录音</string>
+    <string name="play_over">播放完成</string>
+    <string name="play_error">抱歉，播放发生异常</string>
+    <string name="stop_by_up">松开停止录音</string>
+    <string name="speak_by_press">按住说话</string>
+    <string name="start_record">开始录音</string>
+    <string name="stop_record">停止录音</string>
+    <string-array name="menu_forum">
+        <item>全部版块</item>
+        <item>推荐版块</item>
+        <item>收藏版块</item>
+    </string-array>
+    <string-array name="menu_fav">
+        <item>我的版块</item>
+        <item>我的帖子</item>
+    </string-array>
+    <string-array name="menu_notice">
+        <item>帖子</item>
+        <item>好友</item>
+    </string-array>
+    <string-array name="menu_reading_guide">
+        <item>联盟</item>
+        <item>专栏</item>
+        <item>精华</item>
+        <item>热帖</item>
+    </string-array>
+
+</resources>

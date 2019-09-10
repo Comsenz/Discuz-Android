@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/register_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue">
+
+        <ImageView
+            android:id="@+id/register_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Rednet.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="注册"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/to_login"
+            style="@style/TextAppearance.Rednet.SubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@android:color/transparent"
+            android:text="登录"
+            android:textColor="#ffffff"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <WebView
+        android:id="@+id/regsiter_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height= "wrap_content"-->
+    <!--android:layout_marginTop="15dip"-->
+    <!--android:background="@color/white"-->
+    <!-->-->
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dip"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="@color/dividing_line" />-->
+    <!--<EditText-->
+    <!--android:id="@+id/register_account_edit"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="15dip"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:hint="用户名"-->
+    <!--android:textSize="18dip"-->
+    <!--android:background="@android:color/transparent"/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dip"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginLeft="15dip"-->
+    <!--android:layout_marginRight="15dip"-->
+    <!--android:background="@color/dividing_line" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/white"-->
+    <!-->-->
+    <!--<EditText-->
+    <!--android:id="@+id/register_pwd_edit"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_marginLeft="15dip"-->
+    <!--android:hint="密码"-->
+    <!--android:textSize="18dip"-->
+    <!--android:background="@android:color/transparent"/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dip"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginLeft="15dip"-->
+    <!--android:layout_marginRight="15dip"-->
+    <!--android:background="@color/dividing_line" />-->
+    <!--</RelativeLayout>-->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height= "wrap_content"-->
+    <!--android:background="@color/white"-->
+    <!-->-->
+    <!--<EditText-->
+    <!--android:id="@+id/confirm_pwd_edit"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="15dip"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:hint="确认密码"-->
+    <!--android:textSize="18dip"-->
+    <!--android:background="@android:color/transparent"/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dip"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginLeft="15dip"-->
+    <!--android:layout_marginRight="15dip"-->
+    <!--android:background="@color/dividing_line" />-->
+    <!--</RelativeLayout>-->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height= "wrap_content"-->
+    <!--android:background="@color/white"-->
+    <!-->-->
+    <!--<EditText-->
+    <!--android:id="@+id/register_email_edit"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="15dip"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:hint="Email"-->
+    <!--android:textSize="16dip"-->
+    <!--android:background="@android:color/transparent"/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dip"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@color/dividing_line" />-->
+    <!--</RelativeLayout>-->
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/register_btn"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="35dip"-->
+    <!--android:layout_marginBottom="10dip"-->
+    <!--android:background="@color/blue" >-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="提交"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="20dip" />-->
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dip"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@color/dividing_line" />-->
+    <!--</RelativeLayout>-->
+</LinearLayout>

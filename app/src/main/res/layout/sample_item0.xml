@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/TextAppearance.Rednet.Title"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/background"
+    android:drawableLeft="@drawable/mark"
+    android:drawablePadding="6dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:textColor="@android:color/black" />

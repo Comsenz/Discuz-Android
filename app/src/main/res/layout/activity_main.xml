@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/news"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextAppearance.Rednet.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发现"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_t"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_settings"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/discovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/search" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:background="@android:color/darker_gray" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <RadioButton
+            android:id="@+id/index"
+            style="@style/TextAppearance.Rednet.Text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/main_tab_index"
+            android:gravity="center"
+            android:text="@string/frist_page"
+            android:textColor="@color/selector_main_tab" />
+
+        <RadioButton
+            android:id="@+id/community"
+            style="@style/TextAppearance.Rednet.Text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/main_tab_community"
+            android:gravity="center"
+            android:text="社区"
+            android:textColor="@color/selector_main_tab"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/forum"
+            style="@style/TextAppearance.Rednet.Text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/main_tab_forum"
+            android:gravity="center"
+            android:text="版块"
+            android:textColor="@color/selector_main_tab" />
+
+        <RadioButton
+            android:id="@+id/guide"
+            style="@style/TextAppearance.Rednet.Text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/main_tab_guide"
+            android:gravity="center"
+            android:text="阅读"
+            android:textColor="@color/selector_main_tab"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/me"
+            style="@style/TextAppearance.Rednet.Text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/main_tab_me"
+            android:gravity="center"
+            android:text="@string/my"
+            android:textColor="@color/selector_main_tab" />
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.tencent.DiscuzMob"
+        >
+
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="true" />
+    <!-- 【必须】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 录音和播放录音 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- SD卡权限 -->
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".base.RedNetApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/Theme.Rednet"
+        tools:replace="Android:icon, android:theme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zslt.takephoto.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Rednet.Splash"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="rednet"
+                    android:scheme="rednet" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ThreadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RednetMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BindManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SimpleWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <!--
+                AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
+                的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。
+                开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            -->
+            <meta-data
+                android:name="AuthorizeAdapter"
+                android:value="cn.sharesdk.demo.MyAdapter" />
+
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="cn.tencent.DiscuzMo.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.activity.ForumDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ThreadDetailsActivity"
+            android:exported="true"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- <data android:scheme="cn.rednet.bbs" /> -->
+                <!-- <data android:host="cn.rednet.bbs" /> -->
+                <data android:scheme="com.tencent.DiscuzMob"
+                    tools:ignore="AppLinkUrlError" />
+                <data android:host="com.tencent.DiscuzMob"
+                    tools:ignore="AppLinkUrlError" />
+                <data android:path="/thread/common" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.VoteThreadDetailsActivity"
+            android:exported="true"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="cn.rednet.bbs" />
+                <data android:host="cn.rednet.bbs" />
+                <data android:path="/thread/vote" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ActivityThreadDetailsActivity"
+            android:exported="true"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.GeneralSettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.activity.UserDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyFavritesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dialog.SelectQuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".ui.dialog.SelectReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".ui.activity.SendThreadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.SendVoteThreadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.SendActivityThreadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.activity.SendMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.dialog.SelectThreadTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dialog.SelectActivityCateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".ui.dialog.SelectActivitySexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".ui.dialog.ListSeleterDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".ui.dialog.CheckSecureDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".ui.activity.MyFavActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyFavForumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyFavThreadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.UserThreadsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MessageMineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MessageNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MessagePubMineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dialog.SelectPhotoDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name=".ui.activity.UserRepliesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.JoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.VoterPollpotionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.VoterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyPmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.activity.ShowImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.activity.RelevanceLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginBindingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NewRegisterActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name=".db.RednetContentProvider"
+            android:authorities="cn.zslt.bbs.provider"
+            android:exported="false"
+            android:multiprocess="true" />
+
+        <receiver android:name=".receiver.AppBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tencent.xg.RegisterReceiver">
+            <intent-filter>
+                <action android:name="com.qq.xg.ACTION_REGIST" />
+                <action android:name="com.qq.xg.ACTION_UNREGIST" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ****************************************************信鸽推送************************************************* -->
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <!-- 【必须】 exported设置为true -->
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action" -->
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v2">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <!-- 【可选】 usb相关的系统广播，增强信鸽service的复活机会，请根据需要添加 -->
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushService"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v2" />
+
+        <!-- 【必须】 通知service，其中android:name部分要改为当前包名 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 【必须】 请修改为当前APP名包.PUSH_ACTION，如demo的包名为：com.qq.xgdemo -->
+                <!-- <action android:name="cn.rednet.bbs.PUSH_ACTION" /> -->
+                <action android:name="cn.bbs.rednet.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".receiver.MessageReceiver">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 请修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100205856" />
+        <!-- 【必须】 请修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="ANMB44R1U59B" />
+        <!-- ****************************************************END************************************************* -->
+
+
+        <!-- *******友盟统计******** -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58411c4e75ca3509f3001080" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="PUBLIC" />
+        <!-- *******END******** -->
+
+        <activity
+            android:name=".ui.activity.ForumListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LiveDetialActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.FootprintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TermsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PostThreadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyNewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyThreadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.InteractionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SystemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AdministrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.JoinManagerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.ShowPhotoActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

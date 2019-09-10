@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_select_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.6"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <WebView
+                android:id="@+id/secure_img"
+                android:layout_width="100dip"
+                android:layout_height="40dip"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/dividing_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <EditText
+                android:id="@+id/secure_edit"
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:hint="这里填写答案"
+                android:textColor="@color/gray_font_title" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/dividing_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/check_secure_btn"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <TextView
+                style="@style/TextAppearance.Rednet.Text.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确定"
+                android:textColor="@color/gray_font_title" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:visibility="invisible" />
+</LinearLayout>

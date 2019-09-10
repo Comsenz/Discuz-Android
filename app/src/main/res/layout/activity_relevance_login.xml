@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/login_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Rednet.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="关联登录"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/to_register"
+            style="@style/TextAppearance.Rednet.SubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@android:color/transparent"
+            android:text="注册"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <cn.tencent.DiscuzMob.widget.AsyncRoundedImageView
+        android:id="@+id/iv_three_icon"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_header_def" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="20dp"
+            android:text="亲爱的用户:"
+            android:textColor="#7d7d7d"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_three_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="20dp"
+            android:text="小明"
+            android:textColor="#333"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:text="为了给您更好的服务,请关联一个掌上论坛账户。"
+        android:textColor="#333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:text="还没有掌上论坛账户?"
+        android:textColor="#9c9c9c"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_three_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bt_blue_bg"
+        android:gravity="center"
+        android:text="立即注册"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:text="已有掌上论坛账户?"
+        android:textColor="#9c9c9c"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_three_relevance"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bt_white_bg"
+        android:gravity="center"
+        android:text="立即关联"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+</LinearLayout>

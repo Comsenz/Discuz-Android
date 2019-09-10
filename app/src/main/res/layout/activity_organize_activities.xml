@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <FrameLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:keepScreenOn="true">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Rednet.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="发起活动"
+            android:textColor="#565656" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/action_bar"
+        android:background="#fff"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dividing_line" />
+
+            <EditText
+                android:id="@+id/activity_title"
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:hint="标题(最多只能输入80个字符)"
+                android:maxLength="80"
+                android:minHeight="42dp"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="#d3d3d3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dividing_line" />
+
+            <TextView
+                android:id="@+id/tv_types"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:text="选择帖子主题分类"
+                android:textColor="#d3d3d3"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dividing_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <TextView
+                    style="@style/TextAppearance.Rednet.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动详情"
+                    android:textColor="#d3d3d3"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/activity_detail"
+                    style="@style/TextAppearance.Rednet.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="活动详情"
+                    android:textColor="@color/black"
+                    android:textColorHint="#d3d3d3" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8px"
+                android:background="@color/dividing_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="8dp">
+
+                <ImageView
+                    android:id="@+id/activity_cover"
+                    android:layout_width="70dp"
+                    android:layout_height="84dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/bg_cover" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_group_divider"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="* "
+                            android:textColor="@color/red"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="开始时间："
+                            android:textColor="#555555" />
+
+                        <TextView
+                            android:id="@+id/start_time_edit"
+                            style="@style/TextAppearance.Rednet.Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="请选择开始时间"
+                            android:textColor="@color/black"
+                            android:textColorHint="#d3d3d3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="* "
+                            android:textColor="@color/red"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="结束时间："
+                            android:textColor="#555555" />
+
+                        <TextView
+                            android:id="@+id/end_time_edit"
+                            style="@style/TextAppearance.Rednet.Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="请选择结束时间"
+                            android:textColor="@color/black"
+                            android:textColorHint="#d3d3d3" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8px"
+                android:background="@color/dividing_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_group_divider"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="* "
+                        android:textColor="@color/red"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="活动地点："
+                        android:textColor="#555555" />
+
+                    <EditText
+                        android:id="@+id/activity_address"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入活动地点"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_group_divider"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="所在城市："
+                        android:textColor="#555555" />
+
+                    <EditText
+                        android:id="@+id/activity_city"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入所在城市"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_group_divider"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_star"
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="* "
+                        android:textColor="@color/red"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/tv_star"
+                        android:text="活动类别："
+                        android:textColor="#555555" />
+
+                    <TextView
+                        android:id="@+id/activity_cate"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="100dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_collection"
+                        android:drawableRight="@drawable/down"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:singleLine="true"
+                        android:text="自定义"
+                        android:textColor="#555555"
+                        android:textColorHint="#555555" />
+
+                    <EditText
+                        android:id="@+id/activity_edit_cate"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/activity_cate"
+                        android:layout_toRightOf="@+id/tv_type"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请输入活动类别"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_group_divider"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="需要人数："
+                        android:textColor="#555555" />
+
+                    <EditText
+                        android:id="@+id/activity_member_size"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView4"
+                        android:layout_toRightOf="@+id/textView3"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="0为不限人数"
+                        android:maxEms="10"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/activity_sex"
+                        android:text="性别："
+                        android:textColor="#555555" />
+
+                    <TextView
+                        android:id="@+id/activity_sex"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="100dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_collection"
+                        android:drawableRight="@drawable/down"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:singleLine="true"
+                        android:text="不限"
+                        android:textColor="#555555"
+                        android:textColorHint="#555555" />
+                </RelativeLayout>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="51dp"-->
+                <!--android:background="@drawable/bg_group_divider"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/textView4"-->
+                <!--style="@style/TextAppearance.Rednet.Text.Title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:text="性        别："-->
+                <!--android:textColor="#555555" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/activity_sex"-->
+                <!--style="@style/TextAppearance.Rednet.Text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="33dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:background="@drawable/bg_collection"-->
+                <!--android:drawableRight="@drawable/down"-->
+                <!--android:ellipsize="end"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingRight="5dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:text="不限"-->
+                <!--android:textColor="#555555"-->
+                <!--android:textColorHint="#555555" />-->
+                <!--</LinearLayout>-->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp">
+
+                    <TextView
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="用户报名填写"
+                        android:textColor="#555555"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:button="@drawable/selector_options"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <cn.tencent.DiscuzMob.widget.IntricateLayout
+                        android:id="@+id/label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <CheckBox
+                        android:id="@+id/name_check"
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="72dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/selector_user_info"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="姓名"
+                        android:textColor="@color/selector_txt_black_white"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/phone_check"
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="72dp"
+                        android:layout_height="36dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/selector_user_info"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="手机"
+                        android:textColor="@color/selector_txt_black_white"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/qq_check"
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="72dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/selector_user_info"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="QQ"
+                        android:textColor="@color/selector_txt_black_white"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_group_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_group_divider"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="消耗积分："
+                        android:textColor="#555555" />
+
+                    <EditText
+                        android:id="@+id/activity_integral"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="活动参与这需要消耗的金钱"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_group_divider"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="每人花销："
+                        android:textColor="#555555" />
+
+                    <EditText
+                        android:id="@+id/activity_spendingl"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="元"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.Rednet.Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="报名截止："
+                        android:textColor="#555555" />
+
+                    <TextView
+                        android:id="@+id/activity_end"
+                        style="@style/TextAppearance.Rednet.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="报名截止时间"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8px"
+                android:background="@color/dividing_line" />
+
+            <TextView
+                android:id="@+id/publish"
+                style="@style/TextAppearance.Rednet.Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:background="@drawable/rect_round_blue"
+                android:gravity="center"
+                android:text="发布" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/LoadingPopupCircleAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.activity.LiveDetialActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Rednet.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLength="16"
+            android:singleLine="true"
+            android:text="帖子"
+            android:textColor="@color/blue"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divideLine"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_FindFragment_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/blue"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabTextColor="#565656" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/background" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_FindFragment_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_FindFragment_title"
+        android:layout_weight="1" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="46dp">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_hot"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_hot"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:clickable="true"-->
+    <!--android:text="主题"-->
+    <!--android:textColor="@color/selector_tv_remind"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<View-->
+    <!--android:id="@+id/view_hot"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:layout_alignLeft="@+id/tv_hot"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignRight="@+id/tv_hot"-->
+    <!--android:background="@color/blue" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_all"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_all"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:clickable="true"-->
+    <!--android:text="回复"-->
+    <!--android:textColor="@color/selector_tv_remind"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<View-->
+    <!--android:id="@+id/view_all"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:layout_alignLeft="@+id/tv_all"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignRight="@+id/tv_all"-->
+    <!--android:background="@color/blue"-->
+    <!--android:visibility="gone" />-->
+    <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="8px"-->
+    <!--android:background="@color/background" />-->
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginTop="8dp" />-->
+</LinearLayout>

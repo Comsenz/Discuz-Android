@@ -1,0 +1,68 @@
+/***公共样式***/
+
+.backg{background: #fff; margin:10px 0;}
+.vote_title{padding: 10px 0 10px 10px;}
+
+/*去除li最后一个下边框*/
+li:last-child{border-bottom: none;}
+img{max-width:98%}
+
+/*发起投票、活动*/
+.sbg{border: 0; height: 30px; font-size: 1em;}
+
+/*我要参加、看别人加好友--按钮*/
+.sendsubmit_z{padding: 10px 0 10px 10px; overflow: hidden;}
+.send_btz,.cancelBtn{width: 130px; height: 40px; line-height: 40px; display: inline-block; font-size: 1.1em; color: #959595; border-radius: 5px; text-align: center;}
+.send_btz{border:0; background: #3c96d6; color: #fff;}
+.cancelBtn{background: #f9f9f9; border: 1px solid #cdcdcd; float: right; margin-right: 10px;}
+
+/*发起投票、发起活动、活动详细---发布按钮*/
+.sendoperate{border-top: 1px solid #e1e1e1; position: fixed; bottom: 0; background:white; width: 100%;}
+.senbtto{padding: 10px;}
+.sendbtn{width: 100%; height: 40px; line-height: 40px; display: inline-block; font-size: 1.1em; color: #959595; border-radius: 5px; text-align: center;}
+.sendbtn{border:0; background: #3c96d6; color: #fff;}
+
+
+/*消息、我的主题--下边框*/
+.bor1{border-bottom: 1px solid #e1e1e1;}/*padding: 10px 20px 10px 20px;*/
+
+/*个人中心、看别人*/
+.personal{padding: 10px; overflow: hidden;}
+.personal .Head,.name_tiem{float: left;}
+.personal .name_tiem{margin-left: 10px;}
+.name_tiem label{font-size: 1.1em; display: block; color: #555555;}
+.name_tiem .level{width: 40px; height: 20px; line-height: 20px; color: #fff; font-size: 0.9em; background: #fdc54e; border-radius: 3px; text-align: center; margin-top: 15px;}
+.personal .ed_itme{float: right;}
+.ed_itme .Editor{width: 50px; height: 30px; line-height: 30px; display: inline-block; font-size: 1em; background: #f9f9f9; color: #838383; border: 1px solid #e1e1e1; border-radius: 5px; text-align: center;}
+
+.Myrelated{padding: 10px 0 0 10px; background: #fff;}
+.usz{height: 40px; line-height: 40px; border-bottom: 1px solid #e1e1e1; padding: 10px 0;}
+.usz a{font-size: 1.1em; color: #555;}
+.Myrelated .relat_rig{width: 15px; height: 25px; margin: 6px 10px 0 0; float: right; background: url(../images/right.png) no-repeat;}
+
+.group_item{padding: 10px 0 0 10px; background: #fff;}
+.group_item li span{font-size: 1.1em; color: #999; float: right; margin-right: 10px;}
+
+
+
+/*投票、活动列表*/
+.header{background: #fff;}
+.mytop{padding: 10px; height: 60px;}
+.mytop h3{color: #333; font-size: 1.1em; line-height: 30px; display: inline-block;}
+.mytop p{line-height: 30px; color: #999; font-size: 1em; margin-top: 5px;}
+.subTitle span{margin-right: 10px;}
+.subTitle em{font-style: normal; color: #3c96d6;}
+
+.collection{float: right; margin-top: 5px;}
+.collection a{padding: 3px 6px 3px 30px; line-height: 30px; color: #838383; font-size: 1em; background-color: #fbfbfb; border: 1px solid #d1d1d1; text-align: center; border-radius: 5px;}
+.stars{background: url(../images/star.png) no-repeat; background-size: 30%; background-position: 10%;}
+
+.container{margin: 10px; overflow: hidden;}
+.voteBox{margin-bottom: 10px; background-color: #fff; border-radius: 5px;}
+.voteCon{padding: 10px; overflow: hidden;}
+
+.activtit{color: #333; font-size: 1em; line-height: 23px;}
+.detailCon span,.activitem span{display: inline-block; vertical-align: middle; padding: 3px 0;}
+.detailCon span:last-child,.activitem span:last-child{float: right;}
+.detailCon b,.activitem b{width: 23px; height: 23px; display: inline-block; vertical-align: middle;}
+.detailCon em,.activitem em{display: inline-block; vertical-align: middle; font-style: normal; font-size: 0.8em; color: #999;}

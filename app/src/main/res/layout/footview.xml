@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="向左滑动删除选项"
+            android:textColor="@color/red"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/add_img_btn"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_collection"
+            android:gravity="center"
+            android:text="+添加一项"
+            android:textColor="@color/blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_group_divider"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                style="@style/TextAppearance.Rednet.Text.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:text="最多可选"
+                android:textColor="#555555" />
+
+            <EditText
+                android:id="@+id/vote_size"
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_editor"
+                android:inputType="numberSigned"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="#d3d3d3" />
+
+            <TextView
+                style="@style/TextAppearance.Rednet.Text.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 项"
+                android:textColor="#555555" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_group_divider"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                style="@style/TextAppearance.Rednet.Text.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:text="计票天数"
+                android:textColor="#555555" />
+
+            <EditText
+                android:id="@+id/vote_day_size"
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_editor"
+                android:inputType="numberSigned"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="#d3d3d3" />
+
+            <TextView
+                style="@style/TextAppearance.Rednet.Text.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天"
+                android:textColor="#555555" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <CheckBox
+                android:id="@+id/result_show"
+                style="@style/TextAppearance.Rednet.Text.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/selector_cb"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="0dp"
+                android:text="投票后结果可见"
+                android:textColor="#555555" />
+
+            <CheckBox
+                android:id="@+id/open_member"
+                style="@style/TextAppearance.Rednet.Text.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_cb"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="0dp"
+                android:text="公开投票参与人"
+                android:textColor="#555555" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/publish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/submit"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/rect_round_blue"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ok"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_round_blue"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/cancel"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rect_light"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/LoadingPopupCircleAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</LinearLayout>

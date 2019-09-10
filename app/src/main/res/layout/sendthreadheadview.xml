@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="8dp"
+        android:background="@color/dividing_line" />
+
+    <EditText
+        android:id="@+id/title"
+        style="@style/TextAppearance.Rednet.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:hint="帖子标题(最多只能输入80字)"
+        android:inputType="text"
+        android:maxLength="80"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/text" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dividing_line" />
+
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dividing_line" />
+    <TextView
+        android:id="@+id/tv_types"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:text="选择帖子主题分类"
+        android:textColor="@color/text"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dividing_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="8dp"
+        android:background="@color/dividing_line" />
+
+    <EditText
+        android:id="@+id/content"
+        style="@style/TextAppearance.Rednet.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="left|top"
+        android:maxHeight="192dp"
+        android:hint="帖子内容"
+        android:inputType="textMultiLine"
+        android:minHeight="144dp"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/text" />
+</LinearLayout>

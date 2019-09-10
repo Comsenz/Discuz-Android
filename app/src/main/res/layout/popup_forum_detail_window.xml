@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/typepopupwindow_item01"
+        android:layout_width="match_parent"
+        android:layout_height="36dip"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/popupwindow_item01_name"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="置顶帖"
+            android:textColor="@color/gray_font_title" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dividing_line" />
+
+    <LinearLayout
+        android:id="@+id/typepopupwindow_item02"
+        android:layout_width="match_parent"
+        android:layout_height="36dip"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/popupwindow_item02_name"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通贴"
+            android:textColor="@color/gray_font_title" />
+    </LinearLayout>
+
+</LinearLayout>

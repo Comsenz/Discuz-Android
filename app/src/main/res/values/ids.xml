@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="gridview" type="id" />
+    <item name="webview" type="id" />
+    <item name="scrollview" type="id" />
+
+    <item name="fgelv_tag_changed_visibility" type="id" />
+
+    <item name="cover" type="id" />
+    <item name="title" type="id" />
+    <item name="text" type="id" />
+    <item name="dateline" type="id" />
+
+</resources>

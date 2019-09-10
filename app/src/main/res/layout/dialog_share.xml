@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="12dp"
+    android:paddingTop="12dp">
+
+    <TextView
+        android:id="@+id/weibo"
+        style="@style/TextAppearance.Rednet.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ssdk_oks_classic_qzone"
+        android:gravity="center"
+        android:text="QQ空间"
+        android:textColor="@color/text" />
+
+    <TextView
+        android:id="@+id/qq"
+        style="@style/TextAppearance.Rednet.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ssdk_oks_classic_qq"
+        android:gravity="center"
+        android:text="QQ"
+        android:textColor="@color/text" />
+
+    <TextView
+        android:id="@+id/wx"
+        style="@style/TextAppearance.Rednet.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ssdk_oks_classic_wechat"
+        android:gravity="center"
+        android:text="微信"
+        android:textColor="@color/text" />
+
+    <TextView
+        android:id="@+id/pyq"
+        style="@style/TextAppearance.Rednet.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ssdk_oks_classic_wechatmoments"
+        android:gravity="center"
+        android:text="朋友圈"
+        android:textColor="@color/text" />
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,target-densitydpi=hight-dpi">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/android_activities.js"></script>
+    <style type="text/css">
+		button[joined="true"]{background-color:#f1f1f1;color:#b9b9b9}
+		button[joined="false"]{background-color:#3c96d6;color:#ffffff}
+		.attachlist{align:center;text-align:center}
+		.attachlist ul{list-style-type:none;}
+		.attachlist ul li{padding-top:2px;}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="p_header">
+    <div class="header_text">
+        <div class="header_title"></div>
+        <div class="header_bottom">
+            <a><img src="images/views.png" width="14" height="9"></a><span class="view">0</span>
+            <a href="javascript:void(0)"><img class="commentImg" src="images/discuss.png" width="13"
+                                              height="12"></a><span class="reply">0</span>
+            <a class="forumName"></a>
+        </div>
+    </div>
+    <div class="P_figure clearfix">
+        <div class="box01"><img src="images/noavatar_small.png"/><label></label>
+            <span>楼主</span><label class="p_date"></label></div>
+        <!--<div class="box02">
+            <label></label>
+            <label class="p_date"></label>
+        </div>-->
+        <!--<div class="P_share">
+            <div>
+                <a><img src="images/views.png" width="18" height="18"></a><span>0</span>
+            </div>
+        </div>-->
+        <div class="box03">
+        </div>
+    </div>
+</div>
+<div class="p_vote ">
+    <div class="p_vote-text activity_time_tip">
+
+    </div>
+</div>
+<div class="activity_content thread_details">
+    <div class="timeplace">
+        <p class="clock"><label>开始时间:</label><span></span></p>
+        <p class="over"><label>结束时间:</label><span></span></p>
+        <p class="place"><label>地点:</label><span></span></p>
+        <p class="sex"><label>性别:</label><span></span></p>
+        <p class="cost"><label>每人花销:</label><span></span></p>
+        <p class="hadPeople"><label>已报名人数:</label><span><i></i> 人<a class="manageractivity">报名管理</a></span>
+        </p>
+        <!--<p class="hasPeople"><label>剩余名额:</label><span></span></p>-->
+    </div>
+    <div class="contentPictext"></div>
+    <div class="attachlist" hidden>
+        <ul></ul>
+    </div>
+    <div class="P_share">
+        <div>
+            <a><img class="p_zanBtn" src="images/praise.png" width="18"
+                    height="18"></a><span>0</span>
+            <!--<a><img src="images/discuss.png" width="18" height="18"></a><span>0</span>-->
+            <!--<a><img src="images/share.png" width="18" height="18"></a><span>分享</span>-->
+            <a><img src="images/report.png" width="18" height="18"></a><span>举报</span>
+        </div>
+    </div>
+</div>
+<div class="sendoperate" style="position:static;">
+    <div class="senbtto">
+        <button type="submit" class="sendbtn" joined="false"/>
+        我要参加</button>
+    </div>
+</div>
+<!--<div class="p_vote bg" hidden>
+	<div class="p_vote-text">
+            全部回复
+    </div>
+</div>-->
+<div class="margin10px"></div>
+<div class="content_box font_c content_thread_reply">
+    <ul class="thread_reply">
+        <li class="bor1" hidden>
+            <div class="ageImg"><img src="images/noavatar_small.png"/></div>
+            <div class="messRight">
+                <div class="messContent">
+                    <p><a href="javascript:void(0)"></a><span></span></p>
+                    <p class="replyContent"></p>
+                    <div class="attachlist" hidden>
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="P_share">
+                <div class="naTime_02"><label class="time"></label></div>
+                <div>
+                    <div><a class="a"><img src="images/reply.png" width="18" height="18"></a><span
+                            class="replyBtn">回复</span></div>
+                    <!--<div><a class="b"><img src="images/report.png" width="18" height="18"></a><span>举报</span></div>-->
+                    <div><a class="b"><img src="images/report.png" width="18" height="18"></a><span
+                            class="zanNum">举报</span>
+                    </div>
+                </div>
+                <div class="reply_fp" hidden>
+                </div>
+        </li>
+    </ul>
+    <p class="reply_botton_j" hidden><a href="javascript:void(0)">已经全部加载完毕</a></p>
+</div>
+
+</body>
+</html>

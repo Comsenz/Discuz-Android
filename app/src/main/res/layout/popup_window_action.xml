@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="96dip"
+    android:layout_height="72dip"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:id="@+id/popupwindow_item01"
+        android:layout_width="wrap_content"
+        android:layout_height="36dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fav"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/selector_favorite"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="3dp"
+            android:text="收藏"
+            android:textColor="@color/text" />
+
+
+        <TextView
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/dividing_line" />
+
+    <LinearLayout
+        android:id="@+id/popupwindow_item02"
+        android:layout_width="wrap_content"
+        android:layout_height="36dip"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/poster"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/selector_poster"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="3dp"
+            android:text="只看楼主"
+            android:textColor="@color/text" />
+
+    </LinearLayout>
+</LinearLayout>

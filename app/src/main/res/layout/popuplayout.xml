@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_show"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_collection"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="2dp">
+    <!--android:background="@drawable/pop_bg"-->
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:drawableRight="@drawable/close_icon"
+        android:gravity="center"
+        android:paddingRight="15dp"
+        android:text="请选择发帖类型" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_ordinary"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:background="@color/gray_eeeeee"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/pubpost_icon" />
+
+        <TextView
+            android:id="@+id/pop_ordinary"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="15dp"
+            android:text="普通帖"
+            android:textColor="@color/blue" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/go" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_activity"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/gray_eeeeee"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/actpost_icon" />
+
+        <TextView
+            android:id="@+id/pop_activity"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="活动帖"
+            android:textColor="@color/blue" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/go" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_vote"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/gray_eeeeee"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/vote_icon" />
+
+        <TextView
+            android:id="@+id/pop_vote"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="投票帖"
+            android:textColor="@color/blue" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/go" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_debate"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/gray_eeeeee"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/vote_icon" />
+
+        <TextView
+            android:id="@+id/pop_debate"
+            style="@style/pop_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="辩论帖"
+            android:textColor="@color/blue" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/go" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

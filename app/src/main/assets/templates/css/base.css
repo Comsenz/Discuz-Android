@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+/** css reset **/
+html{ color:#333; background:#fff;}
+img{max-width:98%}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,em,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{ margin:0; padding:0;}  
+body,button,input,select,textarea{ font:12px/1.5 "Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;max-width:100%}  
+body a{outline:none;blr:expression(this.onFocus=this.blur());}
+input,select,textarea{ font-size:100%;}  
+table{ border-collapse:collapse;border-spacing:0;}  
+th{ text-align:inherit;}  
+caption,th { text-align:left; }  
+fieldset,img{ border:0;}  
+iframe{ display:block;}  
+ol,ul,li{ list-style:none;}  
+del{ text-decoration:line-through; }  
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:500;}
+legend{ display:none;}  
+q:before,q:after {content:'';}  
+sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}  
+sup {top: -0.5em;}  
+sub {bottom: -0.25em;}  
+ins,a{ text-decoration:none;} 
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block;padding:0px; margin:0px; border:none;}  
+audio,canvas,video{ display:inline-block; *display:inline; *zoom:1;}  
+abbr,acronym{ border:0; font-variant:normal;}  
+address,caption,cite,code,dfn,em,th,var{ font-style:normal; font-weight:500;}
+ul li:last-child{border-bottom: none;}
+
+/** css cell **/
+.clearfix:after{visibility:hidden; display:block; font-size:0; content:"."; clear:both; height:0;}  
+*html .clearfix{ zoom:1;} 
+*+html .clearfix{ zoom:1;}   
+.f-l{ float:left;display:inline;}  
+.f-r{ float:right;display:inline;}
+.m-t8{ margin-top:8px;} 
+
+.t-c{ text-align:center;}
+.t-l{ text-align:left;}
+.t-r{ text-align:right;}
+
+.p-r{ position:relative;}
+.p-a{ position:absolute;}
+
+.m0{margin:0px!important;}
+.m5{ margin:5px!important;}
+.m10{ margin:10px!important;}
+.m15{ margin:15px!important;}
+.m20{ margin:20px!important;}
+
+.mt5{ margin-top:5px!important;}
+.mt10{ margin-top:10px!important;}
+.mt15{ margin-top:15px!important;}
+.mt20{ margin-top:20px!important;}
+.mt30{ margin-top:30px!important;}
+.mt40{ margin-top:40px!important;}
+.mt50{ margin-top:50px!important;}
+.mt60{ margin-top:60px!important;}
+.mt75{ margin-top:75px!important;}
+.mt80{ margin-top:80px!important;}
+.mt90{ margin-top:90px!important;}
+
+.mr5{ margin-right:5px!important;}
+.mr10{ margin-right:10px!important;}
+.mr15{ margin-right:15px!important;}
+.mr20{ margin-right:20px!important;}
+.mr30{ margin-right:30px!important;}
+.mr40{ margin-right:40px!important;}
+.mr50{ margin-right:50px!important;}
+.mr55{ margin-right:55px!important;}
+.mr60{ margin-right:60px!important;}
+.mr70{ margin-right:70px!important;}
+
+.mb5{ margin-bottom:5px!important;}
+.mb10{ margin-bottom:10px!important;}
+.mb15{ margin-bottom:15px!important;}
+.mb20{ margin-bottom:20px!important;}
+.mb30{ margin-bottom:30px!important;}
+.mb40{ margin-bottom:40px!important;}
+
+.ml5{ margin-left:5px!important;}
+.ml10{ margin-left:10px!important;}
+.ml15{ margin-left:15px!important;}
+.ml20{ margin-left:20px!important;}
+.ml30{ margin-left:30px!important;}
+.ml40{ margin-left:40px!important;}
+
+.p5{ padding:5px!important;}
+.p10{ padding:10px!important;}
+.p15{ padding:15px!important;}
+.p20{ padding:20px!important;}
+
+.pt5{ padding-top:5px!important;}
+.pt10{ padding-top:10px!important;}
+.pt15{ padding-top:15px!important;}
+.pt20{ padding-top:20px!important;}
+.pt30{ padding-top:30px!important;}
+
+.pr5{ padding-right:5px!important;}
+.pr10{ padding-right:10px!important;}
+.pr15{ padding-right:15px!important;}
+.pr20{ padding-right:20px!important;}
+.pr30{ padding-right:30px!important;}
+.pr40{ padding-right:40px!important;}
+
+.pb5{ padding-bottom:5px!important;}
+.pb10{ padding-bottom:10px!important;}
+.pb15{ padding-bottom:15px!important;}
+.pb20{ padding-bottom:20px!important;}
+.pb38{ padding-bottom:38px!important;}
+.pb100{ padding-bottom:100px!important;}
+
+.pl5{ padding-left:5px!important;}
+.pl10{ padding-left:10px!important;}
+.pl15{ padding-left:15px!important;}
+.pl20{ padding-left:20px!important;}
+.pl30{ padding-left:30px!important;}
+.pl40{ padding-left:40px!important;}

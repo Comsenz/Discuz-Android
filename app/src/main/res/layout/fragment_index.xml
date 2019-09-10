@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/va"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <cn.tencent.DiscuzMob.widget.pagerindicator.PagerSlidingTabStrip
+                android:id="@+id/indicator"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fillViewport="false"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/simple_pager_sliding_tab"
+                android:textSize="@dimen/sp_pager_sliding_tab" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:padding="8dp"
+                android:src="@drawable/ic_discovery" />
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navigation"
+            android:scrollbars="none"/>
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_changqu"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48sp"-->
+            <!--android:background="#ccc"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:text="常去的板块"-->
+            <!--android:textSize="16sp" />-->
+
+        <!--<ListView-->
+            <!--android:id="@+id/lv_changqu"-->
+            <!--android:layout_below="@+id/tv_changqu"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_hotfroum"-->
+            <!--android:layout_below="@+id/lv_changqu"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48sp"-->
+            <!--android:background="#ccc"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:text="热帖"-->
+            <!--android:textSize="16sp" />-->
+
+        <!--<ListView-->
+            <!--android:layout_below="@+id/tv_hotfroum"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/TextAppearance.Rednet.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="加载失败,点击重试"
+        android:textColor="@color/text" />
+
+</ViewAnimator>

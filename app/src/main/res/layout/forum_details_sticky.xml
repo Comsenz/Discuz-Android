@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_sticky" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextAppearance.Rednet.SubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="宋雨喆个人民谣专辑"
+                android:textColor="@android:color/black" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/author"
+                    style="@style/TextAppearance.Rednet.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:text="Ryan枫"
+                    android:textColor="@color/text" />
+
+                <TextView
+                    android:id="@+id/zan"
+                    style="@style/TextAppearance.Rednet.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@+id/comment"
+                    android:drawableLeft="@drawable/icon_zan"
+                    android:drawablePadding="4dp"
+                    android:text="0"
+                    android:textColor="@color/text"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:id="@+id/comment"
+                    style="@style/TextAppearance.Rednet.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@+id/views"
+                    android:drawableLeft="@drawable/icon_comment"
+                    android:drawablePadding="4dp"
+                    android:text="0"
+                    android:textColor="@color/text" />
+
+                <TextView
+                    android:id="@+id/views"
+                    style="@style/TextAppearance.Rednet.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/ic_views"
+                    android:drawablePadding="4dp"
+                    android:text="0"
+                    android:textColor="@color/text" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#f0eff5" />
+    </LinearLayout>
+</FrameLayout>

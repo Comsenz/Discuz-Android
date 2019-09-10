@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,target-densitydpi=hight-dpi">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/android_thread.js"></script>
+    <style type="text/css">
+		.attachlist ul{list-style-type:none;}
+		.attachlist ul li{padding-top:2px;}
+
+
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="p_header">
+        <div class="header_text">
+            <div class="header_title"></div>
+            <div class="header_bottom">
+                <a><img src="images/views.png" width="14" height="9"></a><span
+                    id="viewsCount">0</span>
+                <a href="javascript:void(0)"><img class="commentImg" src="images/discuss.png"
+                                                  width="13"
+                                                  height="12"></a><span id="commentCount">0</span>
+                <a class="forumName"></a>
+            </div>
+        </div>
+        <div class="P_figure clearfix">
+            <div class="box01"><img src="images/noavatar_small.png"/> <label></label>
+                <span>楼主</span><label class="p_date"></label></div>
+            <!--  <div class="box02">
+
+              </div>-->
+            <!-- <div class="P_share font_c">
+                 <div>
+
+                 </div>
+             </div>-->
+            <div class="box03">
+            </div>
+        </div>
+    </div>
+    <div class="content_box font_c thread_details">
+        <div id="thread_content">
+        </div>
+        <div class="attachlist" hidden>
+            <ul></ul>
+        </div>
+        <div class="P_share">
+            <div>
+                <a href="javascript:void(0)"><img class="p_zanBtn" src="images/praise.png"
+                                                  width="12"
+                                                  height="12"><span>0</span></a>
+                <!--<a href="javascript:void(0)"><img src="images/discuss.png" width="18"-->
+                <!--height="18"></a><span>0</span>-->
+                <!--<a href="javascript:void(0)"><img src="images/share.png" width="18" height="18"></a><span>分享</span>-->
+                <a href="javascript:void(0)"><img src="images/report.png" width="12"
+                                                  height="12"
+                                                  style="margin-left:10px;"><span>举报</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="margin10px"></div>
+    <div class="content_box font_c content_thread_reply">
+        <ul class="thread_reply">
+            <li class="bor1" hidden>
+                <div class="ageImg"><img src="images/noavatar_small.png"></div>
+                <div class="messRight">
+                    <div class="messContent">
+                        <p><a href="javascript:void(0)"></a><span></span></p>
+                        <p class="replyContent"></p>
+                        <div class="attachlist" hidden>
+                            <ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="P_share">
+                    <div class="naTime_02"><label class="time"></label></div>
+                    <a class="huifu">
+                        <div>
+                            <img src="images/reply.png" width="12" height="12">
+                            <span class="replyBtn">回复</span>
+                        </div>
+                    </a>
+                    <a class="jubao">
+                        <div>
+                            <img src="images/report.png" width="12" height="12">
+                            <span class="zanNum">举报</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="reply_fp" hidden></div>
+            </li>
+        </ul>
+        <p class="reply_botton_j" hidden><a href="javascript:void(0)">已经全部加载完毕</a></p>
+    </div>
+    <div hidden class="P_footer clearfix">
+        <input class="P_write" value="写跟帖" id="txt"/>
+        <div class="P_icon">
+            <span class="smiling_face"><img src="images/smiling_face.png" width="45" height="45"
+                                            alt=""/></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>		

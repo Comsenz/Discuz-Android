@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/va"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <cn.tencent.DiscuzMob.widget.NestedSwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <cn.tencent.DiscuzMob.widget.NestedRefreshContentLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp">
+
+                        <cn.tencent.DiscuzMob.widget.AsyncRoundedImageView
+                            android:id="@+id/avatar_preview"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_centerHorizontal="true"
+                            app:riv_oval="true"/>
+
+                        <TextView
+                            android:id="@+id/my_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/avatar_preview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/text_title"
+                            android:textSize="17sp"/>
+
+                        <TextView
+                            android:id="@+id/my_level"
+                            style="@style/TextAppearance.Rednet.Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@+id/my_name"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rect_round_blue"
+                            android:gravity="center"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="11sp"/>
+                        <!--android:background="#FFC125"-->
+                        <TextView
+                            android:id="@+id/edit"
+                            style="@style/TextAppearance.Rednet.Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/rect_border_1"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingTop="4dp"
+                            android:text="编辑"
+                            android:textColor="@color/text"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/background"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/my_friend"
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@drawable/ucbar_0"
+                            android:gravity="center_horizontal"
+                            android:text="好友"
+                            android:textColor="@color/text_title"/>
+
+                        <TextView
+                            android:id="@+id/my_collection"
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@drawable/ucbar_1"
+                            android:gravity="center_horizontal"
+                            android:text="收藏"
+                            android:textColor="@color/text_title"/>
+
+                        <TextView
+                            android:id="@+id/my_remind"
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@drawable/ucbar_2"
+                            android:gravity="center_horizontal"
+                            android:text="消息"
+                            android:textColor="@color/text_title"/>
+
+                        <TextView
+                            android:id="@+id/my_topic"
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/topic_icon"
+                            android:gravity="center_horizontal"
+                            android:text="主题"
+                            android:textColor="@color/text_title"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/my_reply"
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ucbar_4"
+                            android:gravity="center_horizontal"
+                            android:text="回复"
+                            android:textColor="@color/text_title"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/my_thread"
+                            style="@style/TextAppearance.Rednet.Text.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:drawablePadding="5dp"
+                            android:drawableTop="@drawable/thread"
+                            android:gravity="center_horizontal"
+                            android:text="帖子"
+                            android:textColor="@color/text_title"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/background"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp">
+
+                            <TextView
+                                style="@style/TextAppearance.Rednet.Text.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:drawableLeft="@drawable/wallet_icon"
+                                android:drawablePadding="8dp"
+                                android:gravity="center_vertical"
+                                android:text="我的钱包"
+                                android:textColor="@color/text_title"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:src="@drawable/go"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_gravity="bottom"
+                                android:background="@color/divider"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp">
+
+                            <TextView
+                                style="@style/TextAppearance.Rednet.Text.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:drawableLeft="@drawable/blacklist_icon"
+                                android:drawablePadding="8dp"
+                                android:gravity="center_vertical"
+                                android:text="我的黑名单"
+                                android:textColor="@color/text_title"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:src="@drawable/go"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_gravity="bottom"
+                                android:background="@color/divider"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/background"/>
+
+                    <LinearLayout
+                        android:id="@+id/group_Layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <!--<RelativeLayout-->
+                            <!--android:id="@+id/rl_footprint"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="48dp">-->
+
+                            <!--<TextView-->
+                                <!--style="@style/TextAppearance.Rednet.Text.Title"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:drawableLeft="@drawable/foot"-->
+                                <!--android:drawablePadding="8dp"-->
+                                <!--android:gravity="center_vertical"-->
+                                <!--android:text="我的足迹"-->
+                                <!--android:textColor="@color/text_title"/>-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_alignParentRight="true"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:src="@drawable/go"/>-->
+
+                            <!--<View-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="1px"-->
+                                <!--android:layout_gravity="bottom"-->
+                                <!--android:background="@color/divider"/>-->
+
+                        <!--</RelativeLayout>-->
+                        <RelativeLayout
+                            android:id="@+id/bind_relative"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp">
+
+                            <TextView
+                                style="@style/TextAppearance.Rednet.Text.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/bindmessage_text"
+                                android:layout_alignBottom="@+id/bindmessage_text"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:drawableLeft="@drawable/time"
+                                android:drawablePadding="8dp"
+                                android:gravity="center_vertical"
+                                android:text="绑定管理"
+                                android:textColor="@color/text_title"/>
+
+                            <TextView
+                                android:id="@+id/bindmessage_text"
+                                style="@style/TextAppearance.Rednet.Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/text"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_gravity="bottom"
+                                android:background="@color/divider"/>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp">
+
+                            <TextView
+                                style="@style/TextAppearance.Rednet.Text.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/register_time_text"
+                                android:layout_alignBottom="@+id/register_time_text"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:drawableLeft="@drawable/time"
+                                android:drawablePadding="8dp"
+                                android:gravity="center_vertical"
+                                android:text="注册时间"
+                                android:textColor="@color/text_title"/>
+
+                            <TextView
+                                android:id="@+id/register_time_text"
+                                style="@style/TextAppearance.Rednet.Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/text"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_gravity="bottom"
+                                android:background="@color/divider"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/background"/>
+
+                    <LinearLayout
+                        android:id="@+id/value_Layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp">
+
+                            <TextView
+                                style="@style/TextAppearance.Rednet.Text.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:drawableLeft="@drawable/theme"
+                                android:drawablePadding="8dp"
+                                android:gravity="center_vertical"
+                                android:text="主题数"
+                                android:textColor="@color/text_title"/>
+
+                            <TextView
+                                android:id="@+id/thread_count_text"
+                                style="@style/TextAppearance.Rednet.Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|right"
+                                android:text="0"
+                                android:textColor="@color/text"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_gravity="bottom"
+                                android:background="@color/divider"/>
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp">
+
+                            <TextView
+                                style="@style/TextAppearance.Rednet.Text.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:drawableLeft="@drawable/reply"
+                                android:drawablePadding="8dp"
+                                android:gravity="center_vertical"
+                                android:text="回帖数"
+                                android:textColor="@color/text_title"/>
+
+                            <TextView
+                                android:id="@+id/reply_count_text"
+                                style="@style/TextAppearance.Rednet.Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|right"
+                                android:text="0"
+                                android:textColor="@color/text"/>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/background"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/release_binding"
+                            style="@style/TextAppearance.Rednet.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rect_round"
+                            android:gravity="center"
+                            android:text="解绑"
+                            android:textColor="@android:color/darker_gray"
+                            android:visibility="visible"/>
+
+                        <TextView
+                            android:id="@+id/logout_view"
+                            style="@style/TextAppearance.Rednet.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rect_round"
+                            android:gravity="center"
+                            android:text="退出"
+                            android:textColor="@android:color/darker_gray"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divideLine"/>
+                </LinearLayout>
+            </ScrollView>
+        </cn.tencent.DiscuzMob.widget.NestedRefreshContentLayout>
+
+    </cn.tencent.DiscuzMob.widget.NestedSwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="您还未登录,点击去登录"
+        android:textColor="@color/text"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+</ViewAnimator>

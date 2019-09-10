@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/rl_glide"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/forun_bg"
+              android:orientation="vertical"
+              android:paddingBottom="5dp"
+              android:paddingLeft="7dp"
+              android:paddingRight="7dp"
+              android:paddingTop="5dp">
+
+    <cn.tencent.DiscuzMob.widget.ShapedImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        app:shape_mode="round_rect"
+        app:round_radius="10dp"
+        android:layout_gravity="center_horizontal"
+        tools:src="@drawable/newforum"/>
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_forumName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            tools:text="版块名称"/>
+
+        <TextView
+            android:id="@+id/tv_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_themecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="10sp"
+            tools:text="主题：148"/>
+
+        <TextView
+            android:id="@+id/tv_todaycount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_themecount"
+            android:textColor="@color/red"
+            android:textSize="10sp"
+            tools:text="(18)"/>
+    </LinearLayout>
+</LinearLayout>

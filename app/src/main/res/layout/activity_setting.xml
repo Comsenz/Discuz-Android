@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/setting_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            style="@style/TextAppearance.Rednet.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="通用设置"
+            android:textColor="@color/blue"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/image_browse_setting"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/selector_list_item_bg">
+
+                <TextView
+                    style="@style/TextAppearance.Rednet.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:text="无图浏览模式"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/image_select_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/selecte_on_off"/>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/dividing_line"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/notification_setting"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/selector_list_item_bg"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TextAppearance.Rednet.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:text="通知中心设置"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/notification_select_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dip"
+                    android:src="@drawable/selecte_on_off"/>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/dividing_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/clear_cache_setting"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/selector_list_item_bg">
+
+                <TextView
+                    android:id="@+id/setting_version_name"
+                    style="@style/TextAppearance.Rednet.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:text="清除程序缓存"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/setting_version_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <TextView
+                    android:id="@+id/setting_cache"
+                    style="@style/TextAppearance.Rednet.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/setting_version_arrow"
+                    android:text="0.00B"
+                    android:textColor="@android:color/black"/>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/dividing_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_about"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/selector_list_item_bg"
+                android:padding="8dp">
+
+                <TextView
+                    style="@style/TextAppearance.Rednet.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="关于“掌上论坛”"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

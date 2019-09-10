@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/user_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_group"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/management_Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/management_group"
+            android:visibility="gone" />
+        <!--积分-->
+        <ImageView
+            android:id="@+id/integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/integral"
+            android:visibility="gone" />
+        <!--威望-->
+        <ImageView
+            android:id="@+id/prestige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prestige"
+            android:visibility="gone" />
+        <!--金钱-->
+        <ImageView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/money"
+            android:visibility="gone" />
+        <!--贡献-->
+        <ImageView
+            android:id="@+id/contribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contribution"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_key"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="魅力"
+            android:textColor="@color/text_title" />
+
+        <TextView
+            android:id="@+id/item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999"
+            android:textColor="@color/gray_font_title" />
+        <ImageView
+            android:id="@+id/iv_footprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/go"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider" />
+
+</merge>
+

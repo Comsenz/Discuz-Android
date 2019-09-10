@@ -1,0 +1,122 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Common Params -->
+    <dimen name="init_size">0dip</dimen>
+
+    <!-- Header Bar -->
+    <dimen name="header_bar_height">48dip</dimen>
+    <dimen name="header_bar_horizontal_margin">10dip</dimen>
+    <dimen name="header_bar_title_image_height">16dip</dimen>
+    <dimen name="header_bar_text_size">17dip</dimen>
+    <dimen name="header_bar_back_text_size">16dip</dimen>
+
+    <!-- 聊天界面UI -->
+    <dimen name="chat_avater_margin_outer">12dip</dimen>
+    <dimen name="chat_avater_margin_inside">6dip</dimen>
+    <dimen name="chat_avater_margintop">4dip</dimen>
+    <dimen name="chat_footer_margintop">2dip</dimen>
+    <dimen name="chat_footer_marginbottom">0dip</dimen>
+    <dimen name="attachment_picture_width">120dip</dimen>
+
+    <!-- 群名称修改字体 -->
+    <dimen name="chatgroup_nameedit">16dip</dimen>
+
+    <!-- TabbarTool -->
+    <dimen name="tabbar_height">56dip</dimen>
+    <dimen name="tabbar_text_size">11dip</dimen>
+    <dimen name="tabbar_icon_size">28dip</dimen>
+    <dimen name="refresh_cross_postion">120dip</dimen>
+    <dimen name="tabbar_unread_width_height">16dip</dimen>
+    <dimen name="tabbar_unread_text_size">10dip</dimen>
+
+    <!-- Login UI -->
+    <dimen name="login_component_width">220dip</dimen>
+    <dimen name="login_component_height">40dip</dimen>
+    <dimen name="indicator_right_padding">10dip</dimen>
+    <dimen name="indicator_corner_radius">12dip</dimen>
+    <dimen name="indicator_internal_padding">4dip</dimen>
+    <dimen name="header_footer_left_right_padding">24dip</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dip</dimen>
+
+    <!-- Adapter Item height -->
+    <dimen name="space_contact_item_height">60dip</dimen>
+    <dimen name="space_contact_avator_width">42dip</dimen>
+    <dimen name="space_contact_avator_small_width">35dip</dimen>
+    <dimen name="btn_height_exit_chat_and_so_on">38dip</dimen>
+    <dimen name="filter_item_height">52dip</dimen>
+
+    <!-- 选择联系人 -->
+    <dimen name="select_footer_margintop">0dip</dimen>
+    <dimen name="select_footer_marginbottom">0dip</dimen>
+    <dimen name="select_footer_btn_width">76dip</dimen>
+    <dimen name="select_footer_btn_textsize">15dip</dimen>
+
+    <!-- Image -->
+    <dimen name="image_thumbnail_size">100dip</dimen>
+    <dimen name="image_thumbnail_spacing">1dip</dimen>
+    <dimen name="info_avater_height">80dip</dimen>
+    <dimen name="conversation_margin">15dip</dimen>
+    <dimen name="conversation_unread_hw">14dip</dimen>
+    <dimen name="conversation_avater_margin_left">8dip</dimen>
+    <dimen name="conversation_content_margin_top">2dip</dimen>
+    <dimen name="conversation_unread_text_size">8dip</dimen>
+    <dimen name="conversation_time_text_size">12dip</dimen>
+    <dimen name="conversation_title_text_size">16dip</dimen>
+    <dimen name="conversation_content_text_size">14dip</dimen>
+
+    <dimen name="chatlist_avater_height">36dip</dimen>
+    <dimen name="chatlist_hd_avater_height">54dip</dimen>
+    <dimen name="chatlist_hd_item_height">66dip</dimen>
+    <dimen name="chatlist_hd_item_width">59dip</dimen>
+    <dimen name="chatlist_item_height">48dip</dimen>
+    <dimen name="chatlist_item_width">38dip</dimen>
+    <dimen name="quicksearch_text_size">12dip</dimen>
+    <dimen name="dialog_text_size">14dip</dimen>
+    <dimen name="group_config_text_size">16dip</dimen>
+    <dimen name="group_config_name_text_size">12dip</dimen>
+    <dimen name="group_config_item_text_size">10dip</dimen>
+    <dimen name="group_config_exit_text_size">16dip</dimen>
+    <dimen name="system_msg_text_size">14dip</dimen>
+    <!-- <dimen name="chatlist_avater_height_1080p">63dip</dimen> -->
+
+    <dimen name="conversation_search_text_size">14dip</dimen>
+    <dimen name="no_internet_warning_height">35dip</dimen>
+    <dimen name="error_toast_height">35dip</dimen>
+    <dimen name="input_plugin_item_textsize">12dip</dimen>
+    <dimen name="app_switch_item_height">65dip</dimen>
+    <dimen name="contact_line_size">0.5dip</dimen>
+
+    <dimen name="editor_icon_size">24dip</dimen>
+    <dimen name="editor_icon_top">14dip</dimen>
+    <dimen name="editor_icon_bottom">14dip</dimen>
+    <dimen name="editor_icon_twoside">20dip</dimen>
+    <dimen name="editor_icon_right">28dip</dimen>
+
+    <dimen name="item_text_edit">14dip</dimen>
+    <dimen name="item_text_edit_title">13dip</dimen>
+
+    <dimen name="list_loading_text">14sp</dimen>
+
+    <!-- 通知 -->
+    <dimen name="notification_avater">30dip</dimen>
+    <dimen name="notification_avater_margin">15dip</dimen>
+    <dimen name="notification_title_size">14dip</dimen>
+    <dimen name="notification_title_margin">13dip</dimen>
+    <dimen name="notification_content_size">12dip</dimen>
+    <dimen name="notification_note_height">35dip</dimen>
+    <dimen name="notification_note_size">13dip</dimen>
+
+    <dimen name="sp_pager_sliding_tab">14sp</dimen>
+
+    <dimen name="rednet_ab_height">48dp</dimen>
+    <dimen name="rednet_list_item_horizontal_padding">8dp</dimen>
+    <dimen name="rednet_list_item_vertical_padding">8dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+</resources>

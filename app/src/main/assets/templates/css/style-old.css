@@ -1,0 +1,393 @@
+@charset "utf-8";
+/* CSS Document */
+/*全局控制*/
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;/*child elements font-size em unit*/
+	font-family:'Microsoft YaHei';
+	max-width:100%;
+	overflow:hidden;
+}
+h1, h2, h3, h4, ul, li, p, dl, dt, dd, input, img ,button,strong{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+	outline: none;
+}
+ul { list-style:none;}
+a { text-decoration:none;}
+li:last-child{border-bottom: none;}
+img{max-width:98%}
+/******投票详细页面start******/
+/***头部***/
+.p_header{ font-size:1em; font-weight:boid; padding:1em 0.5em 0.5em 0.5em; line-height:1.5em;}
+.p_header .header_text span{ font-size:0.6em; padding:0.3em 0.5em; border-radius:5px; background:#9dcaea; color:#fff;}
+.header_text{border-bottom:1px solid #e1e1e1; line-height:1.5em; padding-bottom:0.5em;}
+.P_figure{ margin-top:0.5em;}
+.P_figure .box01,.box02{ float:left;}
+.P_figure .box02{ margin-left:0.5em;}
+.P_figure .box02 .p_date{ color:#b4b4b4;}
+.P_figure .box02 label{ display:block;}
+.P_figure .box03{ float:right; background:url(../images/triangle.png) no-repeat 0 center ;  height:30px; width:20px; background-size:100%; cursor:pointer;}
+/***投票***/
+.p_vote{width:100%;max-width:100%; color:#a0a0a0; background:#f9f9f9;  border-radius:0.5em; font-size:1em;}
+/***题***/
+.content_box{ padding:0.5em 0.5em 1.2em 0.5em;}
+.content_box .checkbox-item{
+	padding: 1em 0;
+	position: relative;
+}
+.content_box .checkbox-item .icon{
+	width: 1.5em;
+	height: 100%;
+	position: absolute;
+}
+
+.content_box .checkbox-item .content{
+	color: #333;
+	padding-left: 1.6em;
+	line-height: 1.2em;
+}
+
+.content_box .checked .icon div{
+	background:url(../images/right-icon.png) #3c96d6 center center no-repeat;
+	background-size: 100%;
+}
+
+.checkbox-item .icon div{
+	width: 1.2em;
+	height: 1.2em;
+	border: 1px solid #c8c8c8;
+	border-radius:0.3em;
+	background: #fff;
+	cursor: pointer;
+	margin: auto 0;
+}
+.thread_details{font-size:0.9em}
+.thread_details .P_share{font-size:15px}
+.messContent{font-size:0.9em}
+/***提交按钮***/
+.P_submit{ width:100%; background: #3c96d6; color: #fff; text-align:center; line-height:36px; font-size:0.9em; border-radius:0.3em; border:1px solid #d1d1d1;}
+.mt{margin-top:1.2em;}
+.bj{ background:#3c96d6; color:#fff;}
+/***分享链接***/
+.P_share{ padding:1em 0; width:100%;}
+.P_share div{ float:right;}
+.P_share a{ display:block; float:left; margin-right:2px;}
+.P_share span{ margin-right:12px; display:block; float:left; height:18px; line-height:18px; color:#b4b4b4; font-size:0.9em; cursor:pointer;}
+.thread_details .P_share span:nth-of-type(1){ font-size:1em;}
+.thread_details .P_share span:nth-of-type(2){ font-size:1em;}
+/***分享发帖***/
+.P_footer{ border-top:1px solid #d1d1d1; padding: 0 0.5em 0.5em 0.5em; background:#f1f1f1;}
+.P_footer .P_write{ width:64%; background:url(../images/book.png) #fff no-repeat 10px center; height:1.5em; margin-top:10px; padding:8px 0 8px 40px; color:#b4b4b4; float:left; line-height:2em;}
+.P_footer .smiling_face{ height:50px; float:right; margin-top:0.5em;}
+.P_footer .smiling_face span img{ width:100%;}
+.P_footer .smiling_face span{ width:3em; display:block; margin-left:0.3em; float:left;}
+/******投票详细页面end******/
+
+/******投票详细_已投票页面start******/
+.topic_up{ font-size:1em; color:#333; font-weight:bold;}
+.topic_down{ padding:0.5em 0;}
+.topic_down div{ height:0.5em;  border-radius:0.5em; display:inline-block;}
+.topic_down span{ display:inline-block;}
+.topic_down .topic_down_line01{ width:50%; background:#e77d0b;}
+.topic_down .topic_down_line02{ width:40%; background:#3c96d6;}
+.topic_down .topic_down_line03{ width:30%; background:#3c96d6;}
+.topic_down .topic_down_line04{ width:45%; background:#ffc350;}
+.topic_down .topic_down_line05{ width:60%; background:#da2020;}
+/******投票详细_已投票页面end******/
+
+/******投票详细-查看投票参与人1start******/
+.option{ padding:1em 0; font-size:1em; border-bottom:1px solid #e1e1e1; color:555;}
+.option .option_l{ float:left;}
+.option .option_r{ float:right; cursor:pointer;}
+/******投票详细-查看投票参与人1end******/
+
+/******投票详细-查看投票参与人2start******/
+.option_list{border-bottom:1px solid #e1e1e1;}
+.option_list div{ height:80px; line-height:80px; margin:1em 0;}
+.option_list img{ float:left;}
+.option_list h3{ float:left; margin-left:10px; color:#555; font-size:1em;}
+.option_list span{ float:right; line-height:20px; margin-top:24px; height:20px; padding:5px 10px; color:#3c96d6; border:1px solid #3c96d6; border-radius:2px; cursor:pointer;}
+/******投票详细-查看投票参与人2end******/
+
+/******注册start******/
+.register{  width:100%; padding-top:0.5em;}
+.register form{ padding:0 0.5em; background:#fff;}
+.register .username,.password,.password02,.Email{ width:100%; padding:1em 0; border-bottom:1px solid #e1e1e1; color:#555;}
+.button_box{ padding:0 0.5em; }
+.Email{}
+
+/******注册end******/
+
+/******登陆start******/
+.login_name{ background:#efefef; width:100%; height:1000px; padding-top:0.5em;}
+.login_name form{ padding:0 0.5em; background:#fff;}
+.login_name .username,.password{ width:100%; padding:1em 0; border-bottom:1px solid #e1e1e1; color:#555;}
+.login_name .username{ background:url(../images/user.png) no-repeat 0 center; padding-left:45px; }
+.login_name .password{ background:url(../images/pass_word.png) no-repeat 0 center; padding-left:45px;}
+
+/******登陆end******/
+
+/******发消息start******/
+.news{ background:#efefef; height:1000px; padding-top:0.5em;}
+.news .recipients{ width:100%; height:3em; background:#fff; line-height:3em; margin-bottom:1em;}
+.news .recipients label{ float:left; margin-left:0.5em; color:#555;}
+.news .recipients input{ float:left; padding-top:14px;}
+.news .import{ padding:1.5em 0 0 0.5em; height:260px; background:#fff;}
+/******发消息end******/
+
+/******发帖子start******/
+.post{ background:#efefef; height:1000px; padding-top:0.5em;}
+.post .recipients{ width:100%; height:3em; background:#fff; line-height:3em; margin-bottom:1em;}
+.post .recipients input{ float:left; padding-top:14px; margin-left:0.5em;}
+.post .import{ padding:1.5em 0 0 0.5em; height:260px; background:#fff;}
+.atlas span{ margin-left:1.5em; cursor:pointer;}
+.atlas{ position:absolute; bottom:0;}
+
+/******发帖子end******/
+
+/******版块列表start******/
+.list_block{ color:#333; font-weight:500;}
+.list_block span{ color:#3c96d6; font-weight:normal;}
+/******版块列表end******/
+
+/******我的主题start******/
+.Mytheme{ background: #fff;}
+.Mytheme li{padding: 12px 0; border-bottom: 1px solid #e1e1e1;}
+.Mytheme li:last-child{ border-bottom: none;}
+.the_title a{color: #333; font-size:1.2em;}
+.sec_item{margin-top: 10px;}
+.sec_item label{color: #b4b4b4; font-size:1em; margin-right: 10px;}
+/******我的主题end******/
+
+/******我的收藏-板块-帖子start******/
+.header-teb{ height:46px; background:#f8f8f8; border-bottom:1px solid #ededed;}
+.header-teb .t_right,.b_left{ float:left; text-align:center; line-height:40px; width:50%; font-size:1em; color:#888;}
+.header-teb .current{ border-bottom:6px solid #9dcaea; color:#333;}
+/******我的收藏-板块-帖子end******/
+
+/******帖子详细start******/
+.font_c div p{ color:#333; font-size:1em;}
+.pic_bird img{ width:100%;}
+.bg{ background:#efefef;}
+.ageImg{float: left;}
+.messRight{padding-left: 44px;}
+.messRight p{color: #333; font-size: 1.1em;}
+.messRight a{color: #3c96d6;  font-size: 1.2em;}
+.naTime_02{float: left!important;}
+/*.reply_fp{background: #fcfcfc; padding: 10px; margin-top: 20px;}
+.reply_fp p{color: #666; padding: 5px 0;}
+.reply_fp a{color: #3c96d6;}
+*/
+.P_share{margin-bottom: 12px}
+/******帖子详细end******/
+
+
+/******************************************************************************************************/
+
+
+/***首页 start***/
+
+/*广告位 start*/
+.header{position: relative;}
+.header img{width: 100%;}
+.delete{width: 26px; height: 26px; text-indent: -9999em; background:url(../images/delete.png) no-repeat; position: absolute; top: 50%; right: 10px; margin-top: -13px; cursor: pointer;}
+/*广告位 end*/
+
+/*常去版块 start*/
+.often{padding: 20px 0;}
+.often .piece{font-size: 18px; height: 30px; line-height: 30px; color: #666666;}
+.piece span{float: left; width: 5px; height: 18px; background: #1c9fd5; margin: 6px 5px 0 10px;}
+.oftenlist{background: #fff; margin-top: 10px;}
+.oftenlist ul{padding: 0 20px;}
+.oftenlist li{ height: 50px; line-height: 50px; border-bottom: 1px solid #e1e1e1;}
+.oftenlist li:last-child{border-bottom: none;}
+.oftenlist .xcf{color: #3c96d6; font-size: 14px; margin-left: 5px;}
+.of_tit a{color: #333333; font-size: 18px;}
+.of_tit .ico_right{width: 20px; float: right; line-height: 40px;}
+/*常去版块 end*/
+
+/*热帖 start*/
+.posts_z .piece{font-size: 18px; height: 30px; line-height: 30px; color: #333333;}
+.posts_list{background: #fff; margin-top: 10px;}
+.posts_list ul{padding: 0 10px;}
+.posts_list li{padding: 15px 0; overflow: hidden; border-bottom: 1px solid #e1e1e1;}
+.posts_list li:last-child{border-bottom: none;}
+.icoTitle{overflow: hidden;}
+.comments{padding: 0 10px 0 5px; float: left;}
+.comments i{width: 32px; height: 24px; display: block; background: url(../images/comments.png) no-repeat; background-size: 80%;}
+.comments .commsum{color: #b4b4b4; font-size: 14px; margin-top: 5px; display: block;}
+.icoTitle .title_j{padding-left: 50px; }
+.icoTitle .title_j a{color: #333333; font-size: 15px;}
+.figure{display: inline-block; width:56%; float: left; padding-left: 0px!important;}
+.piclist{ width:26%; float: right;}
+.piclist .thumbnail{border-radius: 5%; overflow: hidden; display: block;}
+.piclist .thumbnail img{width: 150%;}
+
+.personImgDate{padding-left: 50px}
+.personImgDate .pack_j{height: 40px; line-height: 40px;}
+.personImgDate .perImg{width: 40px; height: 40px; float:left; border-radius: 15%; overflow: hidden; display: inline-block;}
+.perImg .useimg{width: 100%;}
+.personImgDate .usename{color: #666666; margin-left: 10px; font-size: 14px;}
+.personImgDate .datatime{float: right; color: #b4b4b4; font-size: 14px;}
+/*热帖 end*/
+
+/***首页 end***/
+
+/***投票 start***/
+
+/*发起投票*/
+.information{padding: 20px 0 10px 10px; overflow: hidden;}
+.options{padding-bottom: 20px;}
+.options span{width: 20px; height: 20px; display: inline-block;}
+.la_ri{margin-right: 20px;}
+.span_check{ background: url(../images/button.png) no-repeat;}
+.r_on{background-position: 0 -20px;}
+.ri_che_w{font-size: 1em; color: #555; overflow: hidden; display: inline-block; margin-left: 5px;}
+.input_op{border: 1px solid #e1e1e1; border-left: 0; border-right: 0; padding: 10px 0;}
+.input_op p{padding: 10px 0;}
+.input_op .in_item{width: 200px; height: 30px; border: 1px solid #cdcdcd; border-radius: 5px; font-size: 1em; padding-left: 10px;}
+.input_op .pic_upload{width: 70px; height: 30px; display: inline-block; color: #777; background-color: #f9f9f9; font-size: 1.1em; border: 1px solid #cdcdcd; border-radius: 5px; float: right; margin-right: 10px;}
+.input_op .pic_upload i{width: 24px; height:18px; display: inline-block; background: url(../images/upload.png) no-repeat; margin: 5px 0 0 5px;}
+.pic_file{opacity: 0; position: absolute; width: 70px; height: 30px;}
+.add_item{color: #3c96d6; font-size: 1.1em; padding: 10px 0 0 25px; display: block; background: url(../images/additem.png) no-repeat 0 13px; float: right; margin-right: 10px;}
+.add_item i{width: 20px; height: 20px; display: inline-block;}
+
+.che_item{padding: 0 0 20px 10px; margin-bottom: 0;}
+.number{padding: 20px 0;}
+.number input{width: 100px; height: 30px; border: 1px solid #cdcdcd; border-radius: 5px; font-size: 1em; padding-left: 10px;}
+.number label{font-size: 1em; margin-left: 10px; color: #555;}
+.chebox{width: 20px; height: 20px; display: inline-block; background: url(../images/button.png); background-position: 0 -41px;}
+.c_on{background-position: 0 -62px;}
+.use_che_i{padding-top: 20px; border-top: 1px solid #cdcdcd;}
+.db_z{display: inline-block;}
+.use_che_i .uc_rg{float: right; margin-right: 10px;}
+
+/*投票列表*/
+.activpic{width: 80px; height: 120px; float: left;}
+.activright{padding-left: 90px;}
+.actiplace{background: url(../images/grey-place.png) no-repeat 0 1px; background-size: 95%;}
+.grey-clock{background: url(../images/grey-clock.png) no-repeat 0 1px; background-size: 95%;}
+
+/***投票 end***/
+
+/***活动 start***/
+/*我要参加*/
+.Tel_z{border-bottom:1px solid #e1e1e1; padding-bottom: 10px;}
+.messInput{width: 100%; height: 80px;  margin-top: 20px; border: 0; font-size: 1em; }
+
+/*发起活动*/
+.details{width: 100%; height: 80px; margin-top: 20px; border: 0; font-size: 1em;}
+.pic_ti{padding: 10px 0 10px 10px; overflow: hidden;}
+.pic_ti .posters{width: 80px; height: 110px; border: 2px dashed #d3d3d3; text-align: center; line-height: 110px; font-size: 1em; float: left;}
+.pos_file{width:80px; height:110px; position: absolute; left: 10px; opacity: 0; }
+.Time_item{width:100%; padding-left: 95px;}
+.btos{border-bottom: 1px solid #e1e1e1;}
+.stenTime{font-size: 1.1em; padding: 18px 0; color: #555;}
+.stenTime input{border: 0;}
+.planumber{padding: 0px 0 10px 10px;}
+.planumber p{font-size: 1em; padding:20px 0; color: #555;}
+.arrow{width: 24px; height: 16px; display: inline-block; background: url(../images/ico-arrow.png) no-repeat; background-position: 0 -18px; float: right; margin: 4px 20px 0 0;}
+.click_arrow{width: 24px; height: 16px; display: inline-block; background: url(../images/ico-arrow.png) no-repeat; background-position: 0 0; float: right; margin: 4px 20px 0 0;}
+.planumber input{border: 0; }
+.na_tez{display: none;}
+.sig_nt{width: 60px; height: 35px; line-height: 35px; color: #555; font-size: 1em; display: inline-block; border: 1px solid #3c96d6; text-align: center; border-radius: 5px; margin-right: 20px;}
+.sig_click{background: #3c96d6; color: #fff;}
+
+/*活动详细*/
+.activity_content{padding: 10px; background:#fff;}
+.timeplace{color: #333333;}
+.timeplace p{line-height: 24px; padding-left: 30px; margin: 10px 0; font-size: 1em;}
+.timeplace .clock{background: url(../images/clock.png) no-repeat;}
+.timeplace .place{background: url(../images/place.png) no-repeat;}
+.timeplace .people{color: #999999;}
+.contentPictext img{width: 100%; margin: 10px 0;}
+.contentPictext p{line-height: 25px; font-size: 1em; margin: 10px 0; color: #333;}
+.sendoperate .senbtto .sendbtn{height:36px;font-size:0.9em;}
+
+/*分享弹窗*/
+.share_item{width: 100%; position:fixed; left:0px; bottom: 0; background: #f1f1f1; z-index: 10000; display: block; }
+.share_item .spacing{padding: 10px; text-align: center;}
+.spacing .sh_a{display: block; width: 100%; height: 40px; line-height: 40px; color: #666; font-size: 1em; background: #f9f9f9; border-radius: 5px; border: 1px solid #d1d1d1; margin: 10px 0; }
+.sh_a span{height: 40px; display: inline-block; padding-left: 50px;}
+.sh_a .ico-wei{background: url(../images/wechat.png) no-repeat 0 5px;}
+.sh_a .w_bo{background: url(../images/weibo.png) no-repeat 0 5px;}
+.w_bo{background-position: -40px 5px;}
+.spacing .cancel{background: #979797; color: #fff;}
+
+/*活动列表*/
+.votetit{color: #333; font-size: 1em; line-height: 25px;}
+.detailCon{margin-top: 10px;}
+.endTime{background: url(../images/clock.png) no-repeat 0 2px; background-size: 80%;}
+.innum{background: url(../images/vote-user.png) no-repeat 2px 2px; background-size: 75%;}
+.alert{background: url(../images/alert.png) no-repeat 0 1px; background-size: 90%;}
+/***活动 end***/
+
+/***个人中心 start***/
+
+/*消息*/
+.Message{padding: 10px 0 0 10px; background: #fff;}
+.Message .ageImg{float: left;}
+.Message .messRight{padding: 0 10px 0 70px;}
+.messRight .naTime{line-height: 28px;}
+.naTime .name{color: #333; font-size: 1.2em;}
+.naTime .time{color: #b4b4b4; font-size: 1em; float: right;}
+.messContent{margin-top: 8px;}
+.messContent p{color: #888;}
+.messContent a{color: #3c96d6; font-size: 1.1em; }
+
+/*我的主题*/
+.Mytheme{padding: 0 0 10px 10px; background: #fff;}
+.the_title a{color: #333; font-size: 1.1em;}
+.sec_item{margin-top: 10px;}
+.sec_item label{color: #b4b4b4; font-size: 0.9em; margin-right: 10px;}
+/***个人中心 end***/
+
+.shade{position: absolute; top: 0px; left: 0px; width:100%; height:100%; opacity: 0.5; z-index: 10000; display: block; background: rgb(0, 0, 0);}
+
+
+/***p_header新增***/
+.p_header{ font-size:0.9em; padding:1em 0.5em 1em 0.5em; line-height:1.6em; background:#fff;}
+.p_header .header_text span{ font-size:0.5em; padding:0.3em 0.5em; border-radius:5px; background:#9dcaea; color:#fff;}
+.header_text{border-bottom:1px solid #e1e1e1; line-height:1.2em; padding-bottom:1em; color:#000;}
+.P_figure{ margin-top:0.5em;}
+.P_figure .box01,.box02{ float:left;}
+.P_figure .box02{margin-left: 10px;}
+.P_figure .box02 .p_date{ color:#b4b4b4;    margin-top: 14px; font-size: 0.9em;}
+.P_figure .box02 label{ display:block; font-size:1.1em; color:#666;}
+.P_figure .box03{ float:right; background:url(../images/triangle.png) no-repeat 0 center ;  height:30px; width:20px; background-size:100%; cursor:pointer;}
+/***投票***/
+.p_vote{width:100%; margin:0;color:#a0a0a0; background:#f9f9f9;  font-size:0.9em; border-radius:0.5em;}
+.p_vote-text{padding: 0.6em 0 0.6em 0.5em;}
+.clearfix:after{visibility:hidden; display:block; font-size:0; content:"."; clear:both; height:0;}  
+/***p_header完成***/
+
+.reply_botton_j {
+  width:100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.reply_botton_j a {
+  color: #434343;
+  display: block;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #b9b9b9;
+}
+/***================== 新加 样式 ==================***/
+/*** 控制头像 ***/
+.box01 img{ width: 48px; height: 48px; border-radius: 24px;}
+.ageImg img{ width: 36px; height: 36px; border-radius: 18px;}
+.reply_fp p{ line-height: 40px;}
+.naTime_02 label{ color: #b4b4b4; font-size: 0.8em;}
+.reply_fp{ border: 1px dashed #ccc; font-size: 1em; padding:10px; margin-bottom: 15px; word-wrap: break-word;}
+.reply_wrap{ border: 1px dashed #ccc; font-size: 0.8em; padding:10px; margin-bottom: 15px; word-wrap: break-word;}
+.quote{ border: 1px dashed #ccc; font-size: 0.8em; padding:10px; margin-bottom: 15px; word-wrap: break-word;}
+.content_box{ word-wrap: break-word;}
+.P_figure .box03{ display: none;}
+div.messContent p{word-wrap: break-word;}
+

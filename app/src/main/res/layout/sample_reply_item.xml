@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_eeeeee">
+
+    <TextView
+        android:id="@+id/reply_message"
+        style="@style/TextAppearance.Rednet.Text.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:text="我的好友"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

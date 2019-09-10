@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rednet="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/pm_mine_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/msg_mine_preview"
+        android:background="@drawable/icon_chat_bubble_white"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/pm_mine_msg_content"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/pm_mine_msg_dateline"
+            style="@style/TextAppearance.Rednet.Tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <cn.tencent.DiscuzMob.widget.AsyncRoundedImageView
+        android:id="@+id/msg_mine_preview"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="4dp"
+        rednet:riv_oval="true" />
+
+</RelativeLayout>

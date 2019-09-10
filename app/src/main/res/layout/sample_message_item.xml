@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rednet="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <cn.tencent.DiscuzMob.widget.AsyncRoundedImageView
+            android:id="@+id/header"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="8dp"
+            rednet:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/item1"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="系统消息"
+            android:textColor="@color/text_title_d"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@id/title"
+                    style="@style/TextAppearance.Rednet.Text.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/dateline"
+                    android:textColor="@color/text_title_d" />
+
+                <TextView
+                    android:id="@id/dateline"
+                    style="@style/TextAppearance.Rednet.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/text" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text"
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/options"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@id/title"
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="好像什么都没说"
+                android:textColor="@color/text" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/dateline"
+                    style="@style/TextAppearance.Rednet.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-06-21"
+                    android:textColor="@color/text" />
+
+                <TextView
+                    android:id="@+id/options"
+                    style="@style/TextAppearance.Rednet.Text2"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_rect_blue_s"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:text="同意"
+                    android:textColor="@color/blue"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider" />
+</LinearLayout>
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="96dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/popupwindow_item01"
+        android:layout_width="match_parent"
+        android:layout_height="32dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/popupwindow_item01_name"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部版面"
+            android:textColor="@color/gray_font_title" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dividing_line" />
+
+    <LinearLayout
+        android:id="@+id/popupwindow_item02"
+        android:layout_width="match_parent"
+        android:layout_height="32dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/popupwindow_item02_name"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐版面"
+            android:textColor="@color/gray_font_title" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="visible"
+        android:background="@color/dividing_line" />
+
+</LinearLayout>

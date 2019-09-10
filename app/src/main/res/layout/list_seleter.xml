@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_select_layout"
+    style="@style/Widget.Rednet.AbsListView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentBottom="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_above="@+id/intricatelayout"
+        android:layout_alignParentRight="true"
+        android:background="#fff" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_above="@+id/intricatelayout"
+        android:layout_alignParentRight="true"
+        android:background="#fff"
+        android:padding="8dp"
+        android:src="@drawable/close" />
+
+    <cn.tencent.DiscuzMob.widget.IntricateLayout
+        android:id="@+id/intricatelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"/>
+
+</RelativeLayout>

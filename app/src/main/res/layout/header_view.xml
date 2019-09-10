@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/vote_title"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:hint="标题"
+            android:minHeight="42dp"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#d3d3d3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="8dp"
+            android:background="@color/dividing_line" />
+
+        <TextView
+            android:id="@+id/tv_types"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="选择帖子主题分类"
+            android:textColor="#d3d3d3"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="8dp"
+            android:background="@color/dividing_line" />
+
+        <EditText
+            android:id="@+id/content"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="left|top"
+            android:hint="详情描述"
+            android:inputType="textMultiLine"
+            android:maxHeight="196dp"
+            android:minHeight="144dp"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#d3d3d3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="选项类型"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/vote_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:visibility="gone">
+
+                <RadioButton
+                    style="@style/TextAppearance.Rednet.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="18dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_radio"
+                    android:drawablePadding="4dp"
+                    android:padding="0dp"
+                    android:text="@string/single_choice"
+                    android:textColor="#555555" />
+
+                <RadioButton
+                    style="@style/TextAppearance.Rednet.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_radio"
+                    android:drawablePadding="4dp"
+                    android:padding="0dp"
+                    android:text="@string/multi_choice"
+                    android:textColor="#555555" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dividing_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/vote_img_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dividing_line"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="添加选项"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#ececec"
+                android:dividerHeight="1px"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:smoothScrollbar="true" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

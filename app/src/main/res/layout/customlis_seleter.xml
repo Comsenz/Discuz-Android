@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tthread_title_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/tv_xing"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginRight="8dip"
+            android:gravity="center_vertical"
+            android:text="*"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:minHeight="42dp"
+            android:layout_marginRight="8dip"
+            android:layout_toRightOf="@+id/tv_xing"
+            android:text="多选列表框"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gray_font_title"
+            android:textSize="13sp" />
+
+        <cn.tencent.DiscuzMob.widget.IntricateLayout
+            android:id="@+id/intricatelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="10dp"
+            android:background="#fff" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/xuxian"
+        android:layerType="software" />
+</LinearLayout>

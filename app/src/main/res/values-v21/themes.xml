@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Metrial Design Theme-->
+    <style name="Theme.Rednet" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="vpiCirclePageIndicatorStyle">@style/Widget.Rednet.CirclePageIndicator</item>
+        <item name="slidingTabIndicatorStyle">@style/Widget.Rednet.PagerTabSlidingIndicator</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="Theme.Rednet.Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Rednet.Dialog.FullScreen" parent="Theme.Rednet.Dialog">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

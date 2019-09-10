@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_select"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_margin="10dp"
+    android:background="@drawable/border_circle_radius"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_pop_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2f19dfbb"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#301616"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/timePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <cn.tencent.DiscuzMob.widget.wheelview.WheelView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <cn.tencent.DiscuzMob.widget.wheelview.DashedLineView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/dotted_line"
+            android:gravity="center_vertical" />
+
+        <cn.tencent.DiscuzMob.widget.wheelview.WheelView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <cn.tencent.DiscuzMob.widget.wheelview.DashedLineView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/dotted_line"
+            android:gravity="center_vertical" />
+
+        <cn.tencent.DiscuzMob.widget.wheelview.WheelView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <cn.tencent.DiscuzMob.widget.wheelview.DashedLineView
+            android:id="@+id/line_hour"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dotted_line" />
+
+        <cn.tencent.DiscuzMob.widget.wheelview.WheelView
+            android:id="@+id/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <cn.tencent.DiscuzMob.widget.wheelview.DashedLineView
+            android:id="@+id/line_mins"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dotted_line" />
+
+        <cn.tencent.DiscuzMob.widget.wheelview.WheelView
+            android:id="@+id/mins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2f19dfbb"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="取消"
+            android:textColor="#ff0000"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tv_ensure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="确定"
+            android:textColor="#414341"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

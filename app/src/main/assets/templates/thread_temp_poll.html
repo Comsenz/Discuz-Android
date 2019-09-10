@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,target-densitydpi=hight-dpi"
+          name="viewport" id="viewport"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/rednet-jq-theme.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/android_poll.js"></script>
+    <style>
+	.ui-button-text{
+		color:#333;
+		font-weight:normal;
+		font-family:"微软雅黑";
+		font-size:0.9em;
+	}
+	.poll_list li{
+		margin-top:12px;
+	}
+	.poll_list li:first{
+		margin-top:0px;
+	}
+	.poll_list li label{
+		padding-left:19px;
+	}
+    label.ui-state-default[widget="radio"]{
+		height:15px;
+		text-align:center;
+		background:#ffffff url("images/button.png") no-repeat;
+		background-size: 15px 64px;
+		background-position: 0px 0px;
+	}
+	label.ui-state-active[widget="radio"]{
+		height:15px;
+		text-align:center;
+		background:#ffffff url("images/button.png") no-repeat;
+		background-size: 15px 64px;
+		background-position: 0px -15px;
+	}
+	label.ui-state-default[widget="checkbox"]{
+		height:15px;
+		text-align:center;
+		background:#ffffff url("images/button.png") no-repeat;
+		background-size: 15px 64px;
+		background-position: 0px -31px;
+	}
+	label.ui-state-active[widget="checkbox"]{
+		height:15px;
+		text-align:center;
+		background:#ffffff url("images/button.png") no-repeat;
+		background-size: 15px 64px;
+		background-position: 0px -47px;
+	}
+	.attachlist{align:center;text-align:center}
+	.attachlist ul{list-style-type:none;}
+	.attachlist ul li{padding-top:2px;}
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="p_header">
+        <div class="header_text">
+            <div class="header_title"></div>
+            <div class="header_bottom">
+                <a><img src="images/views.png" width="14" height="9"></a><span class="view">0</span>
+                <a href="javascript:void(0)"><img class="commentImg" src="images/discuss.png"
+                                                  width="13"
+                                                  height="12"></a><span class="reply">0</span>
+                <a class="forumName"></a>
+            </div>
+        </div>
+        <div class="P_figure clearfix">
+            <div class="box01"><img src="images/noavatar_small.png"/><label></label>
+                <span>楼主</span><label class="p_date"></label></div>
+            <!-- <div class="box02">
+                 <label></label>
+                 <label class="p_date"></label>
+             </div>-->
+            <!--  <div class="P_share font_c">
+                  <div>
+                      <a><img src="images/views.png" width="18" height="18"></a><span>0</span>
+                      <a><img src="images/discuss.png" width="18" height="18"></a><span>0</span>
+                  </div>
+              </div>-->
+            <div class="box03">
+            </div>
+        </div>
+    </div>
+    <div class="p_vote ">
+        <div class="p_vote-text vote_tips">
+
+        </div>
+        <div class="p_vote-text vote_time">
+
+        </div>
+    </div>
+    <div class="content_box thread_details">
+        <div>
+            <p id="thread_content"></p>
+            <ul class="poll_list">
+                <li hidden>
+                    <div class="ui-type-poll-img-txt" hidden>
+                        <p><img/></p>
+                        <div><input type="checkbox"/><label widget="checkbox"></label></div>
+                    </div>
+                    <div class="ui-type-poll-txt-only" hidden><input type="checkbox"/><label
+                            widget="checkbox"></label></div>
+                </li>
+                <li hidden>
+                    <div class="ui-type-poll-img-txt" hidden>
+                        <p><img/></p>
+                        <div><input type="radio" name="radio"/><label widget="radio"></label></div>
+                    </div>
+                    <div class="ui-type-poll-txt-only" hidden><input type="radio"
+                                                                     name="radio"/><label
+                            widget="radio"></label></div>
+                </li>
+            </ul>
+            <button class="P_submit mt">提交</button>
+        </div>
+        <div class="attachlist" hidden>
+            <ul></ul>
+        </div>
+        <div class="P_share">
+            <div>
+                <a><img class="p_zanBtn" src="images/praise.png" width="18"
+                        height="18"></a><span>0</span>
+                <!--<a><img src="images/discuss.png" width="18" height="18"></a><span>0</span>-->
+                <!--<a><img src="images/share.png" width="18" height="18"></a><span>分享</span>-->
+                <a><img src="images/report.png" width="18" height="18"></a><span>举报</span>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="p_vote bg" hidden>
+         <div class="p_vote-text">
+             全部回复
+         </div>
+     </div>-->
+    <div class="margin10px"></div>
+    <div class="content_box font_c content_thread_reply">
+        <ul class="thread_reply">
+            <li class="bor1" hidden>
+                <div class="ageImg"><img src=""/></div>
+                <div class="messRight">
+                    <div class="messContent">
+                        <p><a href="javascript:void(0)"></a><span></span></p>
+                        <p class="replyContent"></p>
+                        <div class="attachlist" hidden>
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="P_share">
+                    <div class="naTime_02"><label class="time"></label></div>
+                    <div>
+                        <div><a class="a"><img src="images/reply.png" width="18"
+                                               height="18"></a><span class="replyBtn">回复</span>
+                        </div>
+                        <!--<div><a class="b"><img src="images/report.png" width="18" height="18"></a><span>举报</span></div>-->
+                        <div><a class="b"><img src="images/report.png" width="18"
+                                               height="18"></a><span class="zanNum">举报</span>
+                        </div>
+                    </div>
+                    <div class="reply_fp" hidden></div>
+            </li>
+        </ul>
+        <p class="reply_botton_j" hidden><a href="javascript:void(0)">已经全部加载完毕</a></p>
+    </div>
+    <div class="P_footer clearfix" hidden>
+        <input class="P_write" value="写跟帖" id="txt"></input>
+        <div class="P_icon">
+            <span class="smiling_face"><img src="images/smiling_face.png" width="45" height="45"
+                                            alt=""/></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--60,150,214-->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#3c96d6</color>
+    <!--239,239,239-->
+    <color name="gray_light">#efefef</color>
+    <!--102,102,102-->
+    <color name="gray">#666666</color>
+    <!--153,153,153-->
+    <color name="gray_font_title">#999999</color>
+    <!--166,166,166-->
+    <color name="gray_font_context">#a6a6a6</color>
+    <color name="gray_back">#D6D6D6</color>
+    <color name="dividing_line">#dddddd</color>
+    <color name="item_press">#e2e2e2</color>
+    <color name="gray_eeeeee">#eeeeee</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#FF0000</color>
+    <color name="gray_dddddd">#dddddd</color>
+    <color name="hint_grey">#D3D3D3</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_888888">#888888</color>
+    <color name="gray_777777">#777777</color>
+
+    <color name="background">#f8f8f8</color>
+    <color name="divider">#f0eff5</color>
+    <color name="text_title_d">#4a4f63</color>
+    <color name="text_title">#555555</color>
+    <color name="text">#9c9c9c</color>
+    <color name="divideLine">#d4d4d4</color>
+
+    <drawable name="light_background_drawable">#FFF0EFF5</drawable>
+</resources>

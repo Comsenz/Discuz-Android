@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_select_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/take_photo_view"
+            android:layout_width="fill_parent"
+            android:layout_height="42dip"
+            android:background="@drawable/selector_list_item_bg">
+
+            <TextView
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:text="拍照"
+                android:textColor="@color/gray_font_title" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@color/dividing_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/select_photo_view"
+            android:layout_width="fill_parent"
+            android:layout_height="42dip"
+            android:background="@drawable/selector_list_item_bg">
+
+            <TextView
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:text="选择相册"
+                android:textColor="@color/gray_font_title" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@color/dividing_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cancel_view"
+            android:layout_width="fill_parent"
+            android:layout_height="42dip"
+            android:background="@drawable/selector_list_item_bg">
+
+            <TextView
+                style="@style/TextAppearance.Rednet.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:text="取消"
+                android:textColor="@color/gray_font_title" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@color/dividing_line" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

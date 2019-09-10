@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId 'cn.tencent.DiscuzMob'
+//        applicationId 'cn.bbs.rednet'
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled false
+            shrinkResources false  //删除无用资源
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+                            && 'release'.equals(variant.buildType.name)) {
+                        def apkFile = new File(
+                                output.outputFile.getParent(),
+                                "zhangshangluntan_${variant.flavorName}_v${variant.versionName}_${buildTime()}.apk")
+//                        output.outputFile = apkFile
+                    }
+                }
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':sharesdk')
+    compile project(':pullToRefresh1')
+    compile files('libs/jg_filter_sdk_1.1.jar')
+    compile files('libs/wup-1.0.0.E-SNAPSHOT.jar')
+    compile files('libs/Xg_sdk_v2.47_20161026_0936.jar')
+    compile project(':viewpageindicator')
+    compile files('libs/uil.jar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    //    compile 'liji.library.dev:citypickerview:0.7.0'
+    compile project(':citypickerview')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-annotations:25.3.1'
+    compile 'com.android.support:support-v4:23.2.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:gridlayout-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okhttp:okhttp-android-support:2.3.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.zhy:okhttputils:2.0.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile 'com.alibaba:fastjson:1.2.31'
+    compile 'cn.bingoogolapple:bga-photopicker:1.1.9@aar'
+    compile 'cn.bingoogolapple:bga-adapter:1.0.9@aar'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.chrisbanes.photoview:parent:1.2.2'
+    compile 'com.android.support:mediarouter-v7:23.3.0'
+    compile 'com.pusher:pusher-java-client:1.4.0'
+//    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.facebook.stetho:stetho:1.5.0'
+    compile project(path: ':pullToRefresh1')
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+}

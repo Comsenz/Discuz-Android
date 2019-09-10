@@ -1,0 +1,53 @@
+<resources>
+
+    <style name="Widget.Rednet" parent="android:Widget.Material" />
+
+    <style name="TextAppearance.Rednet" parent="android:TextAppearance" />
+
+    <style name="Widget.Rednet.AbsListView" parent="Widget.AppCompat.ListView">
+        <item name="android:scrollbars">none</item>
+        <item name="android:divider">@color/divider</item>
+        <item name="android:dividerHeight">5dp</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="Widget.Rednet.AbsListView.NoDivider" parent="Widget.AppCompat.ListView">
+        <item name="android:scrollbars">none</item>
+        <item name="android:divider">@null</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="TextAppearance.Rednet.Title" parent="TextAppearance.Rednet">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Rednet.SubTitle" parent="TextAppearance.Rednet">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Rednet.Text" parent="TextAppearance.Rednet">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Rednet.Text2" parent="TextAppearance.Rednet">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.Rednet.Text.Title" parent="TextAppearance.Rednet.SubTitle" />
+
+    <style name="TextAppearance.Rednet.Tip" parent="TextAppearance.Rednet">
+        <item name="android:textSize">9sp</item>
+    </style>
+
+</resources>

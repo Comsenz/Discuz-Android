@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tthread_title_view"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:background="#fff"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/tv_xing"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="15dp"
+            android:text="*"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/info_key_text"
+            style="@style/TextAppearance.Rednet.Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"
+            android:layout_toRightOf="@+id/tv_xing"
+            android:maxLength="5"
+            android:textColor="@color/gray_font_title"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/info_value_edit"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="90dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:background="@color/dividing_line"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/xuxian"
+            android:layerType="software" />
+
+    </RelativeLayout>
+</LinearLayout>

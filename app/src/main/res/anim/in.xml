@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- 对话框出来时的动画-->
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:fromXScale="0.001"
+    android:toXScale="1.0"
+    android:fromYScale="0.001"
+    android:toYScale="1.0"
+    android:pivotX="100%"
+    android:pivotY="10%"
+    android:duration="200" /> <!--fromXScale与toXScale是指一开始的时候在x方向上的缩放比例和在结束时候的比例，1.0就是原本的样子。同理fromYScale和 toYScale--> <!--pivotX和pivotY是指动画开始的位置 起始动画的x和y位置-->

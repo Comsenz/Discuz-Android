@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            style="@style/TextAppearance.Rednet.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="查看投票参与人"
+            android:textColor="@color/black"/>
+
+    </FrameLayout>
+
+    <cn.tencent.DiscuzMob.widget.NestedSwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar">
+
+        <cn.tencent.DiscuzMob.widget.NestedRefreshContentLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+            <ListView
+                android:id="@+id/pollpotion_list"
+                style="@style/Widget.Rednet.AbsListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/action_bar"
+                android:background="@android:color/white"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false" />
+
+        </cn.tencent.DiscuzMob.widget.NestedRefreshContentLayout>
+
+    </cn.tencent.DiscuzMob.widget.NestedSwipeRefreshLayout>
+
+</RelativeLayout>

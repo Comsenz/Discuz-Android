@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <cn.tencent.DiscuzMob.widget.AsyncRoundedImageView
+            android:id="@+id/avatar_author"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/tv_authorName"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/avatar_author"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_font_title"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_leve"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tv_authorName"
+            android:background="@drawable/tv_leve"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/gray_font_title"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:lineSpacingMultiplier="1.2"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_img1"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:maxHeight="100dp"
+            android:maxWidth="80dp"
+            android:src="@drawable/newforum"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_img2"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:maxHeight="100dp"
+            android:maxWidth="80dp"
+            android:src="@drawable/newforum"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/iv_img3"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:maxHeight="100dp"
+                android:maxWidth="80dp"
+                android:src="@drawable/newforum"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_photoCount"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="照片的个数"
+                android:textSize="30sp"
+                android:textColor="#fff"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/gray_eeeeee" />
+</LinearLayout>

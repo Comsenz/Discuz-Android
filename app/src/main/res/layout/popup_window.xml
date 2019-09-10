@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="96dip"
+    android:layout_height="64dip"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/popupwindow_item01"
+        android:layout_width="fill_parent"
+        android:layout_height="32dip"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ic_common" />
+
+        <TextView
+            android:id="@+id/popupwindow_item01_name"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通贴"
+            android:textColor="@color/gray_font_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/popupwindow_item02"
+        android:layout_width="fill_parent"
+        android:layout_height="32dip"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ic_vote" />
+
+        <TextView
+            android:id="@+id/popupwindow_item02_name"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投票贴"
+            android:textColor="@color/gray_font_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/popupwindow_item03"
+        android:layout_width="fill_parent"
+        android:layout_height="32dip"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ic_activity" />
+
+        <TextView
+            android:id="@+id/popupwindow_item03_name"
+            style="@style/TextAppearance.Rednet.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="活动贴"
+            android:textColor="@color/gray_font_title" />
+    </LinearLayout>
+
+
+</LinearLayout>

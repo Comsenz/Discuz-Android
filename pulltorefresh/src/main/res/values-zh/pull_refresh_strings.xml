@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">放开刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新…</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">加载更多</string>
+    <string name="pull_to_refresh_from_bottom_release_label">松开加载</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">正在加载…</string>
+</resources>

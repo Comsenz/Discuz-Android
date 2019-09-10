@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            style="@style/TextAppearance.Rednet.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我的收藏"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:background="@color/divider" />-->
+
+    <!--<PagerSlidingTabStrip-->
+    <!--android:id="@+id/indicator"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="42dp"-->
+    <!--android:background="@android:color/white"-->
+    <!--android:paddingBottom="4dp"-->
+    <!--android:paddingTop="4dp"-->
+    <!--android:textColor="@color/simple_pager_sliding_tab"-->
+    <!--android:textSize="@dimen/sp_pager_sliding_tab"-->
+    <!--android:visibility="gone" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <!--android:background="@drawable/bg_from"-->
+
+        <RelativeLayout
+            android:id="@+id/rl_forum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_forum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="版块"
+                android:textColor="@color/selector_tv_remind"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view_forum"
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_thread"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_thread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="帖子"
+                android:textColor="@color/selector_tv_remind"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view_thread"
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_marginLeft="18dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="horizontal">-->
+    <!--&lt;!&ndash;android:background="@drawable/bg_from"&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_forum"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/bg_text_from"-->
+    <!--android:clickable="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="板块"-->
+    <!--android:textColor="@color/selector_tv_all"-->
+    <!--android:textSize="16sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_thread"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/bg_text_from"-->
+    <!--android:clickable="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="帖子"-->
+    <!--android:textColor="@color/selector_tv_all"-->
+    <!--android:textSize="16sp" />-->
+    <!--</LinearLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider" />
+
+    <FrameLayout
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
