@@ -715,7 +715,7 @@ public class ForumListActivity extends BaseActivity implements View.OnClickListe
                                         strings.put(entry.getKey(), entry.getValue().toString());
                                     }
                                 }
-                                JSONObject threadtypes = Variables.getJSONObject("threadsorts");
+                                JSONObject threadtypes = Variables.getJSONObject("threadtypes");
                                 if (null != threadtypes) {
                                     types = threadtypes.getJSONObject("types");
                                 }
